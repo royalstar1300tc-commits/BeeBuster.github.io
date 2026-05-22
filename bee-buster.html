@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee Buster | 蜂駆除のプロフェッショナル</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+    :root {
+      --yellow: #FFD600;
+      --yellow-dark: #FFA000;
+      --black: #0d0d0d;
+      --black-soft: #1a1a1a;
+      --red: #FF1744;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    .danger-stripe {
+      height: 12px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--yellow) 0px,
+        var(--yellow) 20px,
+        var(--black) 20px,
+        var(--black) 40px
+      );
+    }
+
+    header {
+      background: var(--black);
+      border-bottom: 3px solid var(--yellow);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 30px rgba(255, 214, 0, 0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon { width: 48px; height: 48px; }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--yellow);
+      text-shadow: 0 0 20px rgba(255, 214, 0, 0.5);
+    }
+
+    .logo-text span { color: var(--white); }
+
+    .header-tel { text-align: right; }
+
+    .header-tel .label {
+      font-size: 12px;
+      color: var(--yellow);
+      letter-spacing: 1px;
+    }
+
+    .header-tel .number {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 2px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      animation: pulse 1.5s ease-in-out infinite;
+      margin-top: 4px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,23,68,0.6); }
+      50% { box-shadow: 0 0 0 8px rgba(255,23,68,0); }
+    }
+
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(255,214,0,0.08) 0%, transparent 60%),
+        var(--black);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 80px 40px 80px 80px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 2px;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 .yellow { color: var(--yellow); }
+    .hero h1 .outline {
+      -webkit-text-stroke: 2px var(--yellow);
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #ccc;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 18px;
+      font-weight: 900;
+      padding: 18px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(255,214,0,0.4);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(255,214,0,0.5);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 2px solid var(--white);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+    .hero-hornet {
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50vw;
+      max-width: 650px;
+      z-index: 1;
+      opacity: 0.95;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(255,214,0,0.3));
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(-50%) rotate(-2deg); }
+      50% { transform: translateY(calc(-50% - 20px)) rotate(2deg); }
+    }
+
+    .features-strip {
+      background: var(--yellow);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .feature-item {
+      color: var(--black);
+      font-weight: 900;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-item .icon { font-size: 24px; }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title .en {
+      display: block;
+      font-size: 13px;
+      color: var(--yellow);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+    }
+
+    .section-title h2 .accent { color: var(--yellow); }
+
+    .section-title .line {
+      width: 60px;
+      height: 4px;
+      background: var(--yellow);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+
+    .services-bg { background: var(--black-soft); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--black);
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 32px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; height: 4px;
+      background: var(--yellow);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: var(--yellow);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(255,214,0,0.2);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 48px; margin-bottom: 16px; }
+
+    .service-card h3 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    .service-card .price {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--yellow);
+      font-weight: 700;
+      background: rgba(255,214,0,0.1);
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+    }
+
+    .reason-card {
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    .reason-number {
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+      opacity: 0.3;
+      margin-bottom: -10px;
+    }
+
+    .reason-card h3 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .reason-card p {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    .flow-bg { background: var(--black-soft); }
+
+    .flow-steps {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+
+    .flow-step {
+      flex: 1;
+      min-width: 180px;
+      padding: 32px 24px;
+      position: relative;
+      text-align: center;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: '▶';
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--yellow);
+      font-size: 20px;
+      z-index: 1;
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      background: var(--yellow);
+      color: var(--black);
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .flow-step h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .flow-step p { font-size: 14px; color: #aaa; }
+
+    .warning-section {
+      padding: 60px 40px;
+      background: var(--black-soft);
+    }
+
+    .warning-box {
+      max-width: 900px;
+      margin: 0 auto;
+      border: 3px solid var(--yellow);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .warning-header {
+      background: var(--yellow);
+      color: var(--black);
+      padding: 16px 32px;
+      font-size: 22px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .warning-body {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .warning-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .warning-item .dot {
+      width: 20px;
+      height: 20px;
+      background: var(--red);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .warning-item p { font-size: 15px; line-height: 1.6; color: #ddd; }
+
+    .cta-section {
+      text-align: center;
+      padding: 100px 40px;
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0px, transparent 30px,
+          rgba(255,214,0,0.03) 30px, rgba(255,214,0,0.03) 60px
+        ),
+        var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before, .cta-section::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,214,0,0.05);
+    }
+    .cta-section::before { top: -100px; left: -100px; }
+    .cta-section::after { bottom: -100px; right: -100px; }
+
+    .cta-section h2 {
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .cta-section > p {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 48px;
+    }
+
+    .cta-tel-big {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 4px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      text-shadow: 0 0 40px rgba(255,214,0,0.4);
+    }
+
+    .cta-time { font-size: 14px; color: #888; margin-bottom: 40px; }
+
+    footer {
+      background: #080808;
+      border-top: 3px solid #222;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+
+    footer p { font-size: 13px; color: #555; margin-top: 24px; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--black-soft);
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .stars { color: var(--yellow); font-size: 20px; margin-bottom: 12px; }
+
+    .review-card p {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .reviewer { font-size: 13px; color: #666; font-weight: 700; }
+
+    @media (max-width: 768px) {
+      header { padding: 12px 20px; flex-direction: column; gap: 12px; }
+      .hero-content { padding: 60px 20px; }
+      .hero-hornet { opacity: 0.15; right: -50px; }
+      section { padding: 60px 20px; }
+      .flow-step:not(:last-child)::after { display: none; }
+      .features-strip { gap: 24px; padding: 20px; }
+    }
+
+    .float-contact {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      font-size: 14px;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(255,23,68,0.5);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+
+<div class="danger-stripe"></div>
+
+<header>
+  <div class="logo">
+    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="24" cy="30" rx="10" ry="14" fill="#FFD600"/>
+      <rect x="14" y="26" width="20" height="4" fill="#0d0d0d"/>
+      <rect x="14" y="32" width="20" height="4" fill="#0d0d0d"/>
+      <ellipse cx="24" cy="16" rx="8" ry="8" fill="#FFD600"/>
+      <circle cx="20" cy="14" r="2.5" fill="#0d0d0d"/>
+      <circle cx="28" cy="14" r="2.5" fill="#0d0d0d"/>
+      <ellipse cx="10" cy="20" rx="10" ry="4" fill="rgba(255,255,255,0.3)" transform="rotate(-30 10 20)"/>
+      <ellipse cx="38" cy="20" rx="10" ry="4" fill="rgba(255,255,255,0.3)" transform="rotate(30 38 20)"/>
+      <polygon points="24,44 21,42 27,42" fill="#FFD600"/>
+    </svg>
+    <div class="logo-text">BEE <span>BUSTER</span></div>
+  </div>
+  <div class="header-tel">
+    <div class="label">&#9889; 緊急蜂駆除 24時間受付</div>
+    <div class="number">090-9942-2501</div>
+    <a href="#contact" class="cta-btn">無料見積もり</a>
+  </div>
+</header>
+
+<section class="hero" style="max-width:100%; padding:0;">
+  <div class="hero-content">
+    <div class="hero-badge">&#9888;&#65039; 危険！発見したらすぐ連絡</div>
+    <h1>
+      蜂を<span class="yellow">今すぐ</span><br>
+      <span class="outline">完全駆除</span><br>
+      します。
+    </h1>
+    <p>スズメバチ・アシナガバチ・ミツバチ・・・どんな蜂でもお任せください。即日対応・豊富な実績・安心の保証付き。</p>
+    <div class="hero-buttons">
+      <a href="tel:09099422501" class="btn-primary">&#9889; 今すぐ電話する</a>
+      <a href="#contact" class="btn-secondary">無料見積もりを依頼</a>
+    </div>
+  </div>
+
+  <svg class="hero-hornet" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="120" cy="220" rx="120" ry="50" fill="rgba(255,255,255,0.12)" transform="rotate(-25 120 220)"/>
+    <ellipse cx="380" cy="220" rx="120" ry="50" fill="rgba(255,255,255,0.12)" transform="rotate(25 380 220)"/>
+    <ellipse cx="130" cy="270" rx="90" ry="35" fill="rgba(255,255,255,0.08)" transform="rotate(-20 130 270)"/>
+    <ellipse cx="370" cy="270" rx="90" ry="35" fill="rgba(255,255,255,0.08)" transform="rotate(20 370 270)"/>
+    <ellipse cx="250" cy="430" rx="85" ry="130" fill="#FFD600"/>
+    <rect x="165" y="330" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <rect x="165" y="368" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <rect x="165" y="406" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <rect x="165" y="444" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <ellipse cx="250" cy="430" rx="85" ry="130" fill="url(#abd)" opacity="0.4"/>
+    <defs>
+      <radialGradient id="abd" cx="30%" cy="30%">
+        <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="black" stop-opacity="0.4"/>
+      </radialGradient>
+      <radialGradient id="eye1" cx="40%" cy="40%">
+        <stop offset="0%" stop-color="#FF4444"/>
+        <stop offset="100%" stop-color="#880000"/>
+      </radialGradient>
+    </defs>
+    <polygon points="250,555 238,515 262,515" fill="#FFD600"/>
+    <polygon points="250,575 242,550 258,550" fill="#cc8800"/>
+    <ellipse cx="250" cy="265" rx="65" ry="60" fill="#1a1200"/>
+    <ellipse cx="250" cy="255" rx="58" ry="50" fill="#FFD600"/>
+    <ellipse cx="250" cy="255" rx="58" ry="50" fill="url(#abd)" opacity="0.5"/>
+    <line x1="190" y1="270" x2="100" y2="310" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="190" y1="285" x2="95" y2="340" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="195" y1="300" x2="100" y2="370" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="310" y1="270" x2="400" y2="310" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="310" y1="285" x2="405" y2="340" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="305" y1="300" x2="400" y2="370" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="100" y1="310" x2="70" y2="350" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="95" y1="340" x2="65" y2="380" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="100" y1="370" x2="70" y2="415" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="400" y1="310" x2="430" y2="350" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="405" y1="340" x2="435" y2="380" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="400" y1="370" x2="430" y2="415" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="250" cy="160" rx="72" ry="68" fill="#FFD600"/>
+    <ellipse cx="250" cy="160" rx="72" ry="68" fill="url(#abd)" opacity="0.3"/>
+    <ellipse cx="208" cy="150" rx="28" ry="32" fill="url(#eye1)"/>
+    <ellipse cx="292" cy="150" rx="28" ry="32" fill="url(#eye1)"/>
+    <ellipse cx="200" cy="140" rx="8" ry="10" fill="rgba(255,255,255,0.35)"/>
+    <ellipse cx="284" cy="140" rx="8" ry="10" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="208" cy="148" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="220" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="196" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="292" cy="148" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="304" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="280" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <path d="M 220 195 Q 200 215 215 230" stroke="#0d0d0d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 280 195 Q 300 215 285 230" stroke="#0d0d0d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 225 232 Q 250 248 275 232" stroke="#0d0d0d" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 225 100 Q 200 60 185 30" stroke="#0d0d0d" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 275 100 Q 300 60 315 30" stroke="#0d0d0d" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="183" cy="28" r="8" fill="#0d0d0d"/>
+    <circle cx="317" cy="28" r="8" fill="#0d0d0d"/>
+    <rect x="215" y="130" width="70" height="12" rx="6" fill="#0d0d0d"/>
+    <rect x="210" y="148" width="80" height="10" rx="5" fill="#0d0d0d"/>
+  </svg>
+</section>
+
+<div class="features-strip">
+  <div class="feature-item"><span class="icon">&#9889;</span>即日対応</div>
+  <div class="feature-item"><span class="icon">&#128737;</span>再発保証付き</div>
+  <div class="feature-item"><span class="icon">&#128175;</span>見積り無料</div>
+  <div class="feature-item"><span class="icon">&#127942;</span>施工実績多数</div>
+  <div class="feature-item"><span class="icon">&#127769;</span>24時間受付</div>
+</div>
+
+<div class="services-bg">
+  <section>
+    <div class="section-title">
+      <span class="en">Services</span>
+      <h2>対応する<span class="accent">蜂の種類</span></h2>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <!-- スズメバチ：太い体・オレンジの頭・力強い顎 -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 88" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 後翅 -->
+            <ellipse cx="16" cy="36" rx="17" ry="6" fill="rgba(200,230,255,0.55)" transform="rotate(-18 16 36)"/>
+            <ellipse cx="64" cy="36" rx="17" ry="6" fill="rgba(200,230,255,0.55)" transform="rotate(18 64 36)"/>
+            <!-- 前翅 -->
+            <ellipse cx="20" cy="28" rx="20" ry="7" fill="rgba(200,230,255,0.7)" transform="rotate(-22 20 28)"/>
+            <ellipse cx="60" cy="28" rx="20" ry="7" fill="rgba(200,230,255,0.7)" transform="rotate(22 60 28)"/>
+            <!-- 脚 -->
+            <line x1="28" y1="46" x2="8"  y2="62" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="30" y1="50" x2="12" y2="70" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="52" y1="46" x2="72" y2="62" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="50" y1="50" x2="68" y2="70" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="32" y1="44" x2="14" y2="56" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="48" y1="44" x2="66" y2="56" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- 腹部（太い・黄黒縞） -->
+            <ellipse cx="40" cy="62" rx="17" ry="22" fill="#FFB300"/>
+            <rect x="23" y="47" width="34" height="7"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="57" width="34" height="7"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="67" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="76" width="34" height="5"  rx="3" fill="#1a1a1a"/>
+            <!-- 針 -->
+            <polygon points="40,84 36,79 44,79" fill="#FFB300"/>
+            <polygon points="40,88 37,83 43,83" fill="#CC7700"/>
+            <!-- 胸部（茶色・太い） -->
+            <ellipse cx="40" cy="40" rx="13" ry="10" fill="#6D4C41"/>
+            <!-- 頭部（オレンジ色 ← スズメバチの特徴） -->
+            <ellipse cx="40" cy="24" rx="14" ry="13" fill="#E65100"/>
+            <!-- 複眼（大きい・赤みがかった黒） -->
+            <ellipse cx="32" cy="22" rx="6" ry="7" fill="#1a0000"/>
+            <ellipse cx="48" cy="22" rx="6" ry="7" fill="#1a0000"/>
+            <ellipse cx="30" cy="20" rx="2" ry="2.5" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="46" cy="20" rx="2" ry="2.5" fill="rgba(255,255,255,0.25)"/>
+            <!-- 顎（スズメバチの力強い大顎） -->
+            <path d="M33 33 Q26 39 29 43" stroke="#4E342E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M47 33 Q54 39 51 43" stroke="#4E342E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <!-- 触角 -->
+            <path d="M34 13 Q29 6 26 2" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M46 13 Q51 6 54 2" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <circle cx="26" cy="2" r="2.5" fill="#3E2723"/>
+            <circle cx="54" cy="2" r="2.5" fill="#3E2723"/>
+          </svg>
+        </div>
+        <h3>スズメバチ駆除</h3>
+        <p>最も危険なスズメバチの巣を安全に駆除。オオスズメバチ・コガタスズメバチ・キイロスズメバチなど全種対応。養生・巣の撤去・処分・簡易清掃・防虫施工まで含みます。</p>
+        <div class="price">¥2,100円〜（税込）</div>
+      </div>
+      <div class="service-card">
+        <!-- アシナガバチ：細い腰・長い後脚が垂れ下がる・スリムな体型 -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 96" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 翅（細め） -->
+            <ellipse cx="18" cy="30" rx="17" ry="5" fill="rgba(200,230,255,0.7)" transform="rotate(-18 18 30)"/>
+            <ellipse cx="62" cy="30" rx="17" ry="5" fill="rgba(200,230,255,0.7)" transform="rotate(18 62 30)"/>
+            <ellipse cx="21" cy="38" rx="13" ry="4" fill="rgba(200,230,255,0.5)" transform="rotate(-15 21 38)"/>
+            <ellipse cx="59" cy="38" rx="13" ry="4" fill="rgba(200,230,255,0.5)" transform="rotate(15 59 38)"/>
+            <!-- 長い後脚（垂れ下がる ← アシナガバチの最大の特徴） -->
+            <path d="M30 42 Q14 60 8 82" stroke="#795548" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M50 42 Q66 60 72 82" stroke="#795548" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- 中脚 -->
+            <line x1="28" y1="40" x2="10" y2="58" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <line x1="52" y1="40" x2="70" y2="58" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <!-- 前脚 -->
+            <line x1="30" y1="36" x2="16" y2="50" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <line x1="50" y1="36" x2="64" y2="50" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <!-- 細い腰（ペティオール ← アシナガバチの特徴） -->
+            <line x1="40" y1="44" x2="40" y2="54" stroke="#795548" stroke-width="3" stroke-linecap="round"/>
+            <!-- 腹部（細長い・先細り） -->
+            <ellipse cx="40" cy="70" rx="11" ry="20" fill="#F9A825"/>
+            <rect x="29" y="56" width="22" height="5" rx="2.5" fill="#4E342E"/>
+            <rect x="29" y="64" width="22" height="5" rx="2.5" fill="#4E342E"/>
+            <rect x="29" y="72" width="22" height="5" rx="2.5" fill="#4E342E"/>
+            <rect x="30" y="80" width="20" height="4" rx="2"   fill="#4E342E"/>
+            <!-- 針 -->
+            <polygon points="40,90 37,85 43,85" fill="#F9A825"/>
+            <polygon points="40,95 38,89 42,89" fill="#9E6B00"/>
+            <!-- 胸部（小さい） -->
+            <ellipse cx="40" cy="38" rx="10" ry="8" fill="#795548"/>
+            <!-- 頭部（小さめ・丸い） -->
+            <ellipse cx="40" cy="24" rx="10" ry="10" fill="#F9A825"/>
+            <!-- 複眼 -->
+            <ellipse cx="34" cy="23" rx="4" ry="5" fill="#1a0000"/>
+            <ellipse cx="46" cy="23" rx="4" ry="5" fill="#1a0000"/>
+            <ellipse cx="33" cy="21" rx="1.5" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="45" cy="21" rx="1.5" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <!-- 触角 -->
+            <path d="M35 15 Q31 8 29 4" stroke="#4E342E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M45 15 Q49 8 51 4" stroke="#4E342E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="29" cy="4" r="2" fill="#4E342E"/>
+            <circle cx="51" cy="4" r="2" fill="#4E342E"/>
+          </svg>
+        </div>
+        <h3>アシナガバチ駆除</h3>
+        <p>軒先や植木に巣を作るアシナガバチを駆除。早期発見・早期駆除で被害を最小限に。養生・巣の撤去・処分・簡易清掃・防虫施工まで対応します。</p>
+        <div class="price">¥1,700円〜（税込）</div>
+      </div>
+      <div class="service-card">
+        <!-- ミツバチ：丸い体・毛がふさふさ・後脚に花粉かご -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 84" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 後翅（小さめ） -->
+            <ellipse cx="17" cy="34" rx="15" ry="7" fill="rgba(200,230,255,0.6)" transform="rotate(-20 17 34)"/>
+            <ellipse cx="63" cy="34" rx="15" ry="7" fill="rgba(200,230,255,0.6)" transform="rotate(20 63 34)"/>
+            <!-- 前翅 -->
+            <ellipse cx="20" cy="26" rx="18" ry="8" fill="rgba(200,230,255,0.75)" transform="rotate(-26 20 26)"/>
+            <ellipse cx="60" cy="26" rx="18" ry="8" fill="rgba(200,230,255,0.75)" transform="rotate(26 60 26)"/>
+            <!-- 脚 -->
+            <line x1="30" y1="46" x2="14" y2="60" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="32" y1="50" x2="18" y2="67" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="50" y1="46" x2="66" y2="60" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="48" y1="50" x2="62" y2="67" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="28" y1="43" x2="12" y2="53" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="52" y1="43" x2="68" y2="53" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <!-- 花粉かご（後脚の黄色い塊 ← ミツバチの特徴） -->
+            <ellipse cx="16" cy="64" rx="5" ry="3.5" fill="#FFD600" transform="rotate(-30 16 64)"/>
+            <ellipse cx="64" cy="64" rx="5" ry="3.5" fill="#FFD600" transform="rotate(30 64 64)"/>
+            <!-- 腹部（丸みのある・橙黄色） -->
+            <ellipse cx="40" cy="60" rx="17" ry="19" fill="#FF8F00"/>
+            <!-- 毛の質感（縞を太めに丸くして毛っぽく） -->
+            <rect x="23" y="47" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="56" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="65" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="24" y="74" width="32" height="4"  rx="2" fill="#1a1a1a"/>
+            <!-- 針 -->
+            <polygon points="40,79 37,75 43,75" fill="#FF8F00"/>
+            <!-- 胸部（毛っぽく・丸い） -->
+            <ellipse cx="40" cy="38" rx="14" ry="11" fill="#FFA000"/>
+            <!-- 毛のテクスチャ（胸部） -->
+            <ellipse cx="40" cy="38" rx="14" ry="11" fill="none" stroke="#CC7700" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
+            <!-- 頭部（丸め） -->
+            <ellipse cx="40" cy="22" rx="12" ry="11" fill="#FFA000"/>
+            <!-- 複眼（丸い） -->
+            <ellipse cx="33" cy="21" rx="5" ry="5.5" fill="#1a0000"/>
+            <ellipse cx="47" cy="21" rx="5" ry="5.5" fill="#1a0000"/>
+            <ellipse cx="31" cy="19" rx="1.8" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="45" cy="19" rx="1.8" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <!-- 触角（短め・ミツバチらしく） -->
+            <path d="M35 12 Q32 6 31 3" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M45 12 Q48 6 49 3" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <circle cx="31" cy="3" r="2.5" fill="#3E2723"/>
+            <circle cx="49" cy="3" r="2.5" fill="#3E2723"/>
+          </svg>
+        </div>
+        <h3>ミツバチ・その他駆除</h3>
+        <p>ミツバチをはじめ、あらゆる種類の蜂の巣に対応。作業前に蜂の種類・状況を丁寧に説明してから施工します。</p>
+        <div class="price">料金はお問い合わせください</div>
+      </div>
+      <div class="service-card">
+        <!-- 蜂の巣イラスト -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 80" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 吊り紐 -->
+            <line x1="40" y1="2" x2="40" y2="14" stroke="#8D6E63" stroke-width="3" stroke-linecap="round"/>
+            <!-- 巣の層（丸みのある層状構造） -->
+            <ellipse cx="40" cy="22" rx="18" ry="9"  fill="#D7CCC8"/>
+            <ellipse cx="40" cy="31" rx="23" ry="10" fill="#BCAAA4"/>
+            <ellipse cx="40" cy="41" rx="26" ry="11" fill="#D7CCC8"/>
+            <ellipse cx="40" cy="51" rx="24" ry="10" fill="#BCAAA4"/>
+            <ellipse cx="40" cy="60" rx="19" ry="9"  fill="#D7CCC8"/>
+            <ellipse cx="40" cy="68" rx="12" ry="6"  fill="#BCAAA4"/>
+            <!-- 巣の六角形セル（正面） -->
+            <polygon points="40,36 44,38 44,43 40,45 36,43 36,38" fill="#A1887F" opacity="0.7"/>
+            <polygon points="31,36 35,38 35,43 31,45 27,43 27,38" fill="#A1887F" opacity="0.5"/>
+            <polygon points="49,36 53,38 53,43 49,45 45,43 45,38" fill="#A1887F" opacity="0.5"/>
+            <polygon points="40,45 44,47 44,52 40,54 36,52 36,47" fill="#8D6E63" opacity="0.5"/>
+            <polygon points="31,45 35,47 35,52 31,54 27,52 27,47" fill="#8D6E63" opacity="0.3"/>
+            <polygon points="49,45 53,47 53,52 49,54 45,52 45,47" fill="#8D6E63" opacity="0.3"/>
+            <!-- 出入口の穴 -->
+            <ellipse cx="40" cy="68" rx="7" ry="4" fill="#6D4C41"/>
+            <ellipse cx="40" cy="68" rx="4" ry="2.5" fill="#4E342E"/>
+            <!-- 小さな蜂（巣から出てくる） -->
+            <ellipse cx="55" cy="55" rx="5" ry="3.5" fill="#FFB300" transform="rotate(-30 55 55)"/>
+            <rect x="51" y="52" width="8" height="2" rx="1" fill="#1a1a1a" transform="rotate(-30 55 55)"/>
+            <ellipse cx="52" cy="51" rx="4" ry="2" fill="rgba(200,230,255,0.7)" transform="rotate(-50 52 51)"/>
+          </svg>
+        </div>
+        <h3>作業内容（全種共通）</h3>
+        <p>&#10003; 養生　&#10003; 蜂の巣撤去・処分　&#10003; 簡易清掃　&#10003; 防虫施工（基本料金に含む）　&#10003; 刺された時の対処法・巣を作らせない対策もアドバイス</p>
+        <div class="price">&#9989; 仕上がり不満の場合は無料追加対応</div>
+      </div>
+    </div>
+
+    <!-- Pricing Table -->
+    <div style="margin-top: 48px; background: var(--black); border: 2px solid var(--yellow); border-radius: 8px; overflow: hidden;">
+      <div style="background: var(--yellow); color: var(--black); padding: 16px 32px; font-size: 20px; font-weight: 900;">&#128176; 料金表</div>
+      <div style="padding: 8px 0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+          <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 16px 32px; color: #ccc;">スズメバチ退治</td>
+            <td style="padding: 16px 32px; color: var(--yellow); font-weight: 900; text-align: right;">¥2,100円〜（税込）</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 16px 32px; color: #ccc;">アシナガバチ退治</td>
+            <td style="padding: 16px 32px; color: var(--yellow); font-weight: 900; text-align: right;">¥1,700円〜（税込）</td>
+          </tr>
+        </table>
+      </div>
+      <div style="padding: 12px 32px 4px; border-top: 1px solid #333;">
+        <p style="font-size: 12px; color: #555; margin: 0; line-height: 2;">
+          ※ 高所作業（3m〜）+¥3,000 / 箇所　／　高所作業（7m超）+¥20,000　／　屋根裏への対応 +¥50,000　／　床下への対応 +¥70,000
+        </p>
+      </div>
+      <div style="padding: 16px 32px 20px; background: rgba(255,214,0,0.05); display: flex; flex-direction: column; gap: 12px;">
+        <p style="font-size: 13px; color: #888; margin: 0;">※ 個人事業のため人件費を抑えた低価格でご提供しています。料金は現地確認後にご提示します。</p>
+        <div style="background: var(--red); border-radius: 6px; padding: 14px 24px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 28px; flex-shrink: 0;">&#128196;</span>
+          <p style="font-size: 16px; font-weight: 900; color: var(--white); margin: 0; line-height: 1.5;">他社の見積書をご提示いただければ、<br><span style="color: var(--yellow); font-size: 19px;">それよりもお安く作業いたします！</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="warning-section">
+  <div class="warning-box">
+    <div class="warning-header">
+      &#9888;&#65039; こんな症状があれば今すぐ連絡を！
+    </div>
+    <div class="warning-body">
+      <div class="warning-item"><div class="dot"></div><p>庭や軒先で蜂が頻繁に飛んでいる</p></div>
+      <div class="warning-item"><div class="dot"></div><p>巣のような構造物を発見した</p></div>
+      <div class="warning-item"><div class="dot"></div><p>蜂に刺されてしまった</p></div>
+      <div class="warning-item"><div class="dot"></div><p>屋根裏や壁の中でブンブン音がする</p></div>
+      <div class="warning-item"><div class="dot"></div><p>子供やペットが蜂に追いかけられた</p></div>
+      <div class="warning-item"><div class="dot"></div><p>去年駆除したのにまた現れた</p></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="section-title">
+    <span class="en">Why Bee Buster</span>
+    <h2><span class="accent">選ばれる</span>理由</h2>
+    <div class="line"></div>
+  </div>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-number">01</div>
+      <h3>個人だから安い</h3>
+      <p>個人事業のため人件費がかからない分、大手より料金を抑えてご提供できます。</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-number">02</div>
+      <h3>丁寧・親切な対応</h3>
+      <p>接客業経験が長く、お客様への説明・対応を大切にしています。メッセージは12時間以内に返信します。</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-number">03</div>
+      <h3>不満なら無料再対応</h3>
+      <p>作業や仕上がりにご不満の場合は、無料で追加対応いたします。安心してお任せください。</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-number">04</div>
+      <h3>室内を汚さない配慮</h3>
+      <p>足カバーを装着してお部屋が汚れないよう細心の注意を払って作業します。</p>
+    </div>
+  </div>
+</section>
+
+<div class="flow-bg">
+  <section>
+    <div class="section-title">
+      <span class="en">Flow</span>
+      <h2>ご依頼の<span class="accent">流れ</span></h2>
+      <div class="line"></div>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <h3>お電話・お問い合わせ</h3>
+        <p>24時間受付。状況をお聞きします。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <h3>無料見積もり</h3>
+        <p>現地確認の上、料金をご提示します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <h3>駆除・施工</h3>
+        <p>プロが安全に作業を行います。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <h3>巣の撤去・消毒</h3>
+        <p>再発防止処理まで徹底します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <h3>アフターフォロー</h3>
+        <p>保証期間内は無償対応します。</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="section-title">
+    <span class="en">Reviews</span>
+    <h2>お客様の<span class="accent">声</span></h2>
+    <div class="line"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>庭にスズメバチの巣ができて怖くて電話したところ、1時間以内に来てくれました。作業も迅速で安心できました。</p>
+      <div class="reviewer">名古屋市中村区在住 30代主婦</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>去年に続き今年もお世話になりました。スタッフの方が丁寧に説明してくれて、料金も明確で助かりました。</p>
+      <div class="reviewer">一宮市在住 40代男性</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>屋根裏にミツバチが大量に！即日来てくれて、消毒まで完璧に対応いただきました。価格も思ったよりリーズナブル。</p>
+      <div class="reviewer">岐阜県羽島市在住 50代女性</div>
+    </div>
+  </div>
+</section>
+
+<!-- お客様へのお願い -->
+<div style="background: var(--black); padding: 80px 40px;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <div class="section-title">
+      <span class="en">Important Notes</span>
+      <h2>お客様への<span class="accent">お願い</span></h2>
+      <div class="line"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">1</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">申込時に詳細をお知らせください</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">住所・蜂の種類・巣の位置と大きさなどの情報をお伝えください。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">2</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">作業中は室内でお待ちください</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">安全のため、作業時間中はお客様に室内でお待ちいただきます。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">3</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">事前に荷物の移動をお願いします</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">作業箇所周辺の荷物は、事前に移動しておいてください。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">4</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">2日以上の余裕をもってご予約を</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">ご予約は作業希望日の最低2日前までにお申し込みください。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">5</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">駐車場のご用意をお願いします</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">駐車場がない場合、駐車場代はお客様のご負担となります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Service Area Section -->
+<div style="background: var(--black-soft); padding: 80px 40px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-title">
+      <span class="en">Service Area</span>
+      <h2>対応<span class="accent">エリア</span></h2>
+      <div class="line"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+      <div style="background: var(--black); border: 2px solid #333; border-radius: 8px; padding: 28px;">
+        <h3 style="color: var(--yellow); font-size: 18px; font-weight: 900; margin-bottom: 16px; border-bottom: 1px solid #333; padding-bottom: 12px;">&#128205; 愛知県</h3>
+        <p style="color: #ccc; font-size: 15px; line-height: 2;">
+          愛西市 / あま市 / 一宮市 / 稲沢市 / 岩倉市 / 春日井市 / 清須市 / 江南市 / 小牧市 / 津島市 / 弥富市<br>
+          名古屋市熱田区 / 北区 / 昭和区 / 千種区 / 天白区 / 中川区 / 中区 / 中村区 / 西区 / 東区 / 瑞穂区 / 緑区 / 港区 / 南区 / 名東区 / 守山区
+        </p>
+      </div>
+      <div style="background: var(--black); border: 2px solid #333; border-radius: 8px; padding: 28px;">
+        <h3 style="color: var(--yellow); font-size: 18px; font-weight: 900; margin-bottom: 16px; border-bottom: 1px solid #333; padding-bottom: 12px;">&#128205; 岐阜県</h3>
+        <p style="color: #ccc; font-size: 15px; line-height: 2;">羽島市</p>
+      </div>
+      <div style="background: var(--black); border: 2px solid var(--yellow); border-radius: 8px; padding: 28px;">
+        <h3 style="color: var(--yellow); font-size: 18px; font-weight: 900; margin-bottom: 16px; border-bottom: 1px solid #333; padding-bottom: 12px;">&#128222; エリア外の方</h3>
+        <p style="color: #ccc; font-size: 15px; line-height: 1.8;">上記エリア外でもお気軽にご相談ください。対応できる場合があります。</p>
+        <a href="tel:09099422501" class="btn-primary" style="display: inline-block; margin-top: 16px; font-size: 15px; padding: 12px 24px;">&#9889; まず電話で相談</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section" id="contact">
+  <div class="danger-stripe" style="margin-bottom:60px;"></div>
+  <h2>&#128027; 蜂を発見したら<br>迷わず連絡！</h2>
+  <p>365日・24時間受付。まずはお気軽にご相談ください。</p>
+  <a href="tel:09099422501" class="cta-tel-big">090-9942-2501</a>
+  <div class="cta-time">受付時間：24時間365日対応 ／ 作業時間：8:00〜20:00</div>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="tel:09099422501" class="btn-primary" style="font-size:18px;">&#9889; 電話で今すぐ相談</a>
+    <a href="#" class="btn-secondary" style="font-size:16px;">&#128203; メールで見積り依頼</a>
+  </div>
+  <div class="danger-stripe" style="margin-top:60px;"></div>
+</div>
+
+<footer>
+  <div class="footer-logo">&#128027; BEE BUSTER</div>
+  <p style="color:#888; margin-top:8px;">蜂駆除のプロフェッショナル</p>
+  <p style="margin-top:24px;">対応エリア：岐阜県羽島市 ／ 愛知県全域（名古屋市各区・一宮市・春日井市 他）／ その他応相談</p>
+  <p>&copy; 2025 Bee Buster. All Rights Reserved.</p>
+</footer>
+
+<a href="tel:09099422501" class="float-contact">&#9889; 今すぐ電話</a>
+
+</body>
+</html>

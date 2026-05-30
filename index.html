@@ -3,1178 +3,1147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="和楽器とロックが融合する革新的な音楽体験 — WAGAKKI ROCK">
-  <title>和楽器ロック | WAGAKKI ROCK</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>蜂駆除【愛知・岐阜・三重】Bee Buster｜スズメバチ・アシナガバチ即日対応 090-9942-2501</title>
+  <meta name="description" content="愛知県（名古屋市・一宮市・春日井市・稲沢市など）・岐阜県羽島市・三重県の蜂駆除はBee Busterにお任せ。スズメバチ¥2,100〜・アシナガバチ¥1,700〜で即日対応。見積無料・再発保証付き。24時間受付 090-9942-2501">
+  <meta name="keywords" content="蜂駆除,ハチ駆除,スズメバチ駆除,アシナガバチ駆除,愛知県,名古屋市,一宮市,春日井市,稲沢市,清須市,江南市,岩倉市,岐阜県,羽島市,三重県,桑名市,四日市市,即日対応,格安,安い,個人,低価格,見積無料">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="蜂駆除【愛知・岐阜・三重】Bee Buster｜即日対応・¥2,100〜">
+  <meta property="og:description" content="愛知・岐阜・三重の蜂駆除専門店。スズメバチ・アシナガバチを安心価格で即日対応。見積無料・再発保証付き。24時間受付 090-9942-2501">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bee Buster",
+    "description": "愛知・岐阜・三重の蜂駆除専門。スズメバチ・アシナガバチを即日対応。個人事業の低価格で安心。",
+    "telephone": "090-9942-2501",
+    "priceRange": "¥1,700〜",
+    "openingHours": "Mo-Su 08:00-20:00",
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "愛知県"},
+      {"@type": "AdministrativeArea", "name": "岐阜県"},
+      {"@type": "AdministrativeArea", "name": "三重県"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "蜂駆除サービス",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "スズメバチ退治"},
+          "price": "2100",
+          "priceCurrency": "JPY"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "アシナガバチ退治"},
+          "price": "1700",
+          "priceCurrency": "JPY"
+        }
+      ]
+    }
+  }
+  </script>
   <style>
-/* =============================================
-   カラー変数
-============================================= */
-:root {
-  --black:      #111111;
-  --black-l:    #1c1c1c;
-  --red:        #9e0c0c;
-  --red-b:      #c41c1c;
-  --gold:       #d4af37;
-  --gold-l:     #f0d878;
-  --cream:      #f0e6d3;
-  --gray:       #777;
-  --font: 'Noto Serif JP', '游明朝', 'Yu Mincho', 'ヒラギノ明朝 ProN W3', serif;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
-/* =============================================
-   リセット & ベース
-============================================= */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+    :root {
+      --yellow: #FFD600;
+      --yellow-dark: #FFA000;
+      --black: #0d0d0d;
+      --black-soft: #1a1a1a;
+      --red: #FF1744;
+      --white: #FFFFFF;
+    }
 
-body {
-  background: var(--black);
-  color: var(--cream);
-  font-family: var(--font);
-  line-height: 1.9;
-  overflow-x: hidden;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-img, iframe { display: block; max-width: 100%; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
 
-/* =============================================
-   和柄パターン（CSSのみ）
-============================================= */
+    .danger-stripe {
+      height: 12px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--yellow) 0px,
+        var(--yellow) 20px,
+        var(--black) 20px,
+        var(--black) 40px
+      );
+    }
 
-/* 麻の葉風 — ヒーロー背景 */
-.hero-pattern {
-  position: absolute; inset: 0;
-  pointer-events: none; opacity: .055;
-  background-image:
-    linear-gradient(30deg,  #7a0000 12%, transparent 12.5%, transparent 87%, #7a0000 87.5%),
-    linear-gradient(150deg, #7a0000 12%, transparent 12.5%, transparent 87%, #7a0000 87.5%),
-    linear-gradient(30deg,  #7a0000 12%, transparent 12.5%, transparent 87%, #7a0000 87.5%),
-    linear-gradient(150deg, #7a0000 12%, transparent 12.5%, transparent 87%, #7a0000 87.5%),
-    linear-gradient(60deg, rgba(100,0,0,.35) 25%, transparent 25.5%, transparent 75%, rgba(100,0,0,.35) 75%),
-    linear-gradient(60deg, rgba(100,0,0,.35) 25%, transparent 25.5%, transparent 75%, rgba(100,0,0,.35) 75%);
-  background-size: 44px 76px;
-  background-position: 0 0, 0 0, 22px 38px, 22px 38px, 0 0, 22px 38px;
-}
+    header {
+      background: var(--black);
+      border-bottom: 3px solid var(--yellow);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 30px rgba(255, 214, 0, 0.2);
+    }
 
-/* 市松模様 — About */
-.about-section { position: relative; }
-.about-section::before {
-  content: '';
-  position: absolute; inset: 0;
-  pointer-events: none; opacity: .032;
-  background-image:
-    linear-gradient(45deg, var(--gold) 25%, transparent 25%),
-    linear-gradient(-45deg, var(--gold) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--gold) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--gold) 75%);
-  background-size: 32px 32px;
-  background-position: 0 0, 0 16px, 16px -16px, -16px 0;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-/* 波紋 — News */
-.news-section { position: relative; }
-.news-section::before {
-  content: '';
-  position: absolute; inset: 0;
-  pointer-events: none; opacity: .042;
-  background-image:
-    radial-gradient(circle, transparent 30%, var(--red) 31%, var(--red) 32%, transparent 33%),
-    radial-gradient(circle, transparent 50%, var(--red) 51%, var(--red) 52%, transparent 53%),
-    radial-gradient(circle, transparent 68%, var(--red) 69%, var(--red) 70%, transparent 71%);
-  background-size: 90px 90px;
-}
+    .logo-icon { width: 48px; height: 48px; }
 
-.about-section > .container,
-.news-section  > .container { position: relative; z-index: 1; }
+    .logo-text {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--yellow);
+      text-shadow: 0 0 20px rgba(255, 214, 0, 0.5);
+    }
 
-/* =============================================
-   ナビゲーション
-============================================= */
-.navbar {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 1rem 0;
-  border-bottom: 1px solid transparent;
-  transition: background .4s, padding .4s, border-color .4s;
-}
-.navbar.scrolled {
-  background: rgba(17,17,17,.93);
-  backdrop-filter: blur(14px);
-  padding: .5rem 0;
-  border-bottom: 1px solid rgba(212,175,55,.18);
-}
+    .logo-text span { color: var(--white); }
 
-.nav-container {
-  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-}
+    .header-tel { text-align: right; }
 
-.nav-logo {
-  font-size: 1.35rem; font-weight: 900;
-  color: var(--gold); letter-spacing: .1em;
-  text-shadow: 0 0 18px rgba(212,175,55,.55);
-  transition: text-shadow .3s;
-}
-.nav-logo:hover { text-shadow: 0 0 30px rgba(212,175,55,.85); }
+    .header-tel .label {
+      font-size: 12px;
+      color: var(--yellow);
+      letter-spacing: 1px;
+    }
 
-/* メニュー：横並び・箇条書き無し */
-.nav-menu {
-  display: flex;
-  list-style: none;   /* ← 箇条書き完全除去 */
-  gap: 2.5rem;
-}
-.nav-link {
-  font-size: .88rem; letter-spacing: .18em;
-  color: var(--cream);
-  position: relative; padding-bottom: 4px;
-  transition: color .3s;
-}
-.nav-link::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0;
-  width: 0; height: 1px;
-  background: var(--gold);
-  transition: width .3s;
-}
-.nav-link:hover { color: var(--gold); }
-.nav-link:hover::after { width: 100%; }
+    .header-tel .number {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 2px;
+    }
 
-/* ハンバーガー（スマホ） */
-.nav-toggle {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 6px;
-  z-index: 1001;
-}
-.nav-toggle span {
-  display: block; width: 26px; height: 2px; background: var(--gold);
-  transition: transform .3s, opacity .3s;
-}
-.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.active span:nth-child(2) { opacity: 0; }
-.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .cta-btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      animation: pulse 1.5s ease-in-out infinite;
+      margin-top: 4px;
+    }
 
-/* =============================================
-   ヒーロー
-============================================= */
-.hero {
-  position: relative;
-  min-height: 100svh;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; overflow: hidden;
-  background:
-    radial-gradient(ellipse 80% 55% at 50%  0%, rgba(110,5,5,.35) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(55,5,5,.25) 0%, transparent 65%),
-    var(--black);
-}
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,23,68,0.6); }
+      50% { box-shadow: 0 0 0 8px rgba(255,23,68,0); }
+    }
 
-/* 金のキラキラパーティクル */
-.hero-sparks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-.hero-sparks span {
-  position: absolute; width: 2px; height: 2px; border-radius: 50%;
-  background: var(--gold); opacity: 0;
-  animation: sparkFloat 8s ease infinite;
-}
-.hero-sparks span:nth-child(1) { left:15%; top:25%; animation-delay:0s;   animation-duration:7s; }
-.hero-sparks span:nth-child(2) { left:78%; top:18%; animation-delay:1.3s;  animation-duration:9s; }
-.hero-sparks span:nth-child(3) { left:42%; top:62%; animation-delay:2.6s;  animation-duration:6s; }
-.hero-sparks span:nth-child(4) { left:88%; top:44%; animation-delay:.9s;   animation-duration:8s; }
-.hero-sparks span:nth-child(5) { left:22%; top:72%; animation-delay:3.5s;  animation-duration:7s; }
-.hero-sparks span:nth-child(6) { left:60%; top:33%; animation-delay:1.8s;  animation-duration:10s; }
-.hero-sparks span:nth-child(7) { left: 7%; top:55%; animation-delay:4.1s;  animation-duration:8s; }
-.hero-sparks span:nth-child(8) { left:52%; top:82%; animation-delay:2.2s;  animation-duration:9s; }
-@keyframes sparkFloat {
-  0%   { opacity:0;   transform:translateY(0) scale(1); }
-  20%  { opacity:.75; }
-  80%  { opacity:.35; }
-  100% { opacity:0;   transform:translateY(-90px) scale(.3); }
-}
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(255,214,0,0.08) 0%, transparent 60%),
+        var(--black);
+    }
 
-.hero-content {
-  position: relative; z-index: 2;
-  padding: 2rem 1.5rem; max-width: 920px;
-  animation: fadeUp 1s ease .2s both;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 80px 40px 80px 80px;
+    }
 
-.hero-badge {
-  display: inline-block;
-  border: 1px solid var(--red-b);
-  color: var(--red-b);
-  font-size: .72rem; letter-spacing: .35em;
-  padding: .4rem 1.6rem; margin-bottom: 1.8rem;
-  position: relative;
-}
-.hero-badge::before, .hero-badge::after {
-  content: '◆';
-  position: absolute; top: 50%; transform: translateY(-50%);
-  color: var(--gold); font-size: .45rem;
-}
-.hero-badge::before { left:  -10px; }
-.hero-badge::after  { right: -10px; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 2px;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
 
-/* タイトル */
-.hero-title { margin-bottom: 1.2rem; line-height: 1; }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
 
-.hero-title-main {
-  display: block;
-  white-space: nowrap;
-  font-size: clamp(3.6rem, 11vw, 8.5rem);
-  font-weight: 900; letter-spacing: .08em;
-  /* 金のグラデーションテキスト */
-  background: linear-gradient(160deg, #fff8e0 0%, var(--gold-l) 35%, var(--gold) 65%, #a07820 100%);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 22px rgba(212,175,55,.45));
-  animation: glowPulse 4s ease-in-out infinite;
-}
-@keyframes glowPulse {
-  0%,100% { filter: drop-shadow(0 0 20px rgba(212,175,55,.4));  }
-  50%      { filter: drop-shadow(0 0 50px rgba(212,175,55,.75)); }
-}
+    .hero h1 .yellow { color: var(--yellow); }
+    .hero h1 .outline {
+      -webkit-text-stroke: 2px var(--yellow);
+      color: transparent;
+    }
 
-.hero-title-sub {
-  display: block;
-  font-size: clamp(.9rem, 2.5vw, 1.35rem);
-  letter-spacing: .55em; color: var(--red-b);
-  margin-top: .6rem; font-weight: 400;
-}
+    .hero p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #ccc;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
 
-/* 区切り装飾 */
-.hero-divider {
-  display: flex; align-items: center; justify-content: center;
-  gap: 1rem; margin: 1.4rem 0 1.8rem;
-}
-.hdl { flex:1; max-width:120px; height:1px; }
-.hdl-l { background: linear-gradient(to right,  transparent, rgba(212,175,55,.45)); }
-.hdl-r { background: linear-gradient(to left, transparent, rgba(212,175,55,.45)); }
-.hdo { color:var(--gold); font-size:.5rem; opacity:.8; }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-.hero-catchcopy {
-  font-size: clamp(.9rem, 2vw, 1.12rem);
-  line-height: 2.4; color: rgba(240,230,211,.82);
-  letter-spacing: .12em; margin-bottom: 3rem;
-}
+    .btn-primary {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 18px;
+      font-weight: 900;
+      padding: 18px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(255,214,0,0.4);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(255,214,0,0.5);
+    }
 
-/* ── CTAボタン（光沢グラデーション） ── */
-.hero-cta {
-  display: inline-flex; align-items: center; gap: .8rem;
-  /* 光沢グラデーション */
-  background: linear-gradient(
-    160deg,
-    #e02020 0%,
-    #9e0c0c 40%,
-    #6a0505 100%
-  );
-  color: var(--cream);
-  padding: 1.1rem 2.8rem;
-  font-size: 1rem; font-weight: 900;
-  letter-spacing: .2em;
-  font-family: var(--font);
-  border: 1px solid rgba(255,120,120,.25);
-  position: relative; overflow: hidden; cursor: pointer;
-  /* 立体感のある影 */
-  box-shadow:
-    0 0 28px rgba(158,12,12,.65),
-    0 0 70px rgba(158,12,12,.25),
-    inset 0 1px 0 rgba(255,255,255,.18),
-    inset 0 -1px 0 rgba(0,0,0,.3);
-  transition: transform .3s ease, box-shadow .3s ease;
-  text-decoration: none;
-}
-/* 光沢スライド */
-.hero-cta::before {
-  content: '';
-  position: absolute; top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
-  transition: left .55s ease;
-}
-.hero-cta::after {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 45%;
-  background: linear-gradient(to bottom, rgba(255,255,255,.1), transparent);
-  pointer-events: none;
-}
-.hero-cta:hover::before { left: 100%; }
-.hero-cta:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 0 40px rgba(196,28,28,.8),
-    0 0 90px rgba(196,28,28,.35),
-    inset 0 1px 0 rgba(255,255,255,.22),
-    inset 0 -1px 0 rgba(0,0,0,.3);
-}
+    .btn-secondary {
+      display: inline-block;
+      border: 2px solid var(--white);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
 
-.cta-play {
-  width: 30px; height: 30px; border-radius: 50%;
-  background: rgba(255,255,255,.16);
-  display: flex; align-items: center; justify-content: center;
-  font-size: .78rem; flex-shrink: 0;
-}
+    .hero-hornet {
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50vw;
+      max-width: 650px;
+      z-index: 1;
+      opacity: 0.95;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(255,214,0,0.3));
+    }
 
-/* スクロールインジケーター */
-.hero-scroll {
-  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: .5rem;
-  color: rgba(212,175,55,.5); font-size: .62rem; letter-spacing: .25em;
-  animation: fadeUp 1.5s ease 1.2s both;
-}
-.scroll-line {
-  width: 1px; height: 44px;
-  background: linear-gradient(to bottom, rgba(212,175,55,.5), transparent);
-  animation: scrollBlink 2.2s ease-in-out infinite;
-}
-@keyframes scrollBlink {
-  0%,100% { opacity:.55; } 50% { opacity:.15; }
-}
+    @keyframes float {
+      0%, 100% { transform: translateY(-50%) rotate(-2deg); }
+      50% { transform: translateY(calc(-50% - 20px)) rotate(2deg); }
+    }
 
-/* =============================================
-   セクション共通
-============================================= */
-.section { padding: 6rem 0; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .features-strip {
+      background: var(--yellow);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
 
-.section-title {
-  text-align: center;
-  font-size: clamp(.88rem, 2.2vw, 1.05rem);
-  letter-spacing: .35em; color: var(--gold);
-  display: flex; align-items: center; justify-content: center; gap: 1rem;
-  margin-bottom: .6rem;
-}
-.tdeco { color: var(--red-b); opacity: .55; }
+    .feature-item {
+      color: var(--black);
+      font-weight: 900;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-.section-sub {
-  text-align: center;
-  font-size: .74rem; letter-spacing: .28em; color: var(--gray);
-  margin-bottom: 4rem;
-}
+    .feature-item .icon { font-size: 24px; }
 
-/* 区切りライン */
-.section-sep {
-  display: flex; align-items: center; justify-content: center;
-  gap: 1rem; margin-bottom: 3.5rem;
-}
-.sep-line {
-  flex: 1; height: 1px;
-  background: linear-gradient(to right, transparent, rgba(212,175,55,.25), transparent);
-}
-.sep-dot { color: var(--red); font-size: .55rem; opacity: .7; }
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* =============================================
-   動画グリッド
-============================================= */
-.videos-section {
-  background:
-    linear-gradient(180deg, var(--black) 0%, #160606 50%, var(--black) 100%);
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-/* ── 動画グリッド：3列均等（PC） ── */
-.videos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-/* featured クラスは幅を独占しない（全カード均等） */
-.video-card.featured { grid-column: span 1; }
+    .section-title .en {
+      display: block;
+      font-size: 13px;
+      color: var(--yellow);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
 
-.video-card {
-  background: var(--black-l);
-  border: 1px solid rgba(212,175,55,.32);
-  border-radius: 2px;
-  position: relative; overflow: hidden;
-  display: flex; flex-direction: column;   /* カード内を縦積みに */
-  transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
-}
-.video-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(158,12,12,.55);
-  box-shadow:
-    0 0 24px rgba(158,12,12,.45),
-    0 0 55px rgba(158,12,12,.18),
-    0 10px 35px rgba(0,0,0,.55);
-}
+    .section-title h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+    }
 
-/* ── 16:9 固定ラッパー ── */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;   /* 9÷16 = 56.25% で常に16:9を維持 */
-  background: #0a0505;
-  overflow: hidden;
-  flex-shrink: 0;        /* iframeの高さが潰れないように */
-}
-.video-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  border: none;
-  display: block;
-}
+    .section-title h2 .accent { color: var(--yellow); }
 
-/* プレースホルダー */
-.video-placeholder {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 1rem;
-  background: linear-gradient(145deg, #0e0505 0%, #1a0808 100%);
-}
-.play-circle {
-  width: 58px; height: 58px; border-radius: 50%;
-  background: rgba(158,12,12,.75);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; color: var(--cream);
-  box-shadow: 0 0 22px rgba(158,12,12,.5);
-  transition: box-shadow .3s, transform .3s;
-}
-.video-card:hover .play-circle {
-  box-shadow: 0 0 38px rgba(158,12,12,.9);
-  transform: scale(1.12);
-}
-.placeholder-label {
-  font-size: .72rem; color: var(--gray);
-  letter-spacing: .1em; text-align: center;
-  padding: 0 1rem; line-height: 1.7;
-}
+    .section-title .line {
+      width: 60px;
+      height: 4px;
+      background: var(--yellow);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
 
-.video-info {
-  padding: 1rem 1.2rem 1.2rem;
-  border-top: 1px solid rgba(212,175,55,.12);
-}
-.video-badge {
-  display: inline-block;
-  background: var(--red); color: var(--cream);
-  font-size: .62rem; letter-spacing: .12em;
-  padding: .15rem .55rem; margin-bottom: .45rem;
-}
-.video-title { font-size: .92rem; font-weight: 700; color: var(--cream); }
-.video-desc  { font-size: .78rem; color: var(--gray); margin-top: .3rem; }
+    .services-bg { background: var(--black-soft); }
 
-/* =============================================
-   プロフィール
-============================================= */
-.about-section {
-  background:
-    linear-gradient(180deg, var(--black) 0%, #121108 50%, var(--black) 100%);
-}
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
 
-.about-content {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: start;
-}
+    .service-card {
+      background: var(--black);
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 32px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
 
-.about-heading {
-  font-size: 1rem; color: var(--gold); letter-spacing: .22em;
-  margin-bottom: 1.4rem; padding-bottom: .75rem;
-  border-bottom: 1px solid rgba(212,175,55,.25);
-  position: relative;
-}
-.about-heading::after {
-  content: '';
-  position: absolute; bottom: -1px; left: 0;
-  width: 36px; height: 1px; background: var(--red-b);
-}
-.about-body {
-  font-size: .92rem; color: rgba(240,230,211,.82);
-  line-height: 2.1; margin-bottom: 1.2rem;
-}
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; height: 4px;
+      background: var(--yellow);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
 
-/* 楽器アイコン */
-.instrument-grid {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: .9rem;
-}
-.instrument-item {
-  display: flex; flex-direction: column; align-items: center; gap: .5rem;
-  padding: 1.2rem .5rem;
-  border: 1px solid rgba(212,175,55,.32);
-  background: rgba(212,175,55,.04);
-  transition: border-color .3s, background .3s, box-shadow .3s;
-}
-.instrument-item:hover {
-  border-color: rgba(158,12,12,.5);
-  background: rgba(158,12,12,.08);
-  box-shadow: 0 0 18px rgba(158,12,12,.2);
-}
-.instrument-icon {
-  font-size: 1.9rem; font-weight: 900; color: var(--gold); line-height: 1;
-  text-shadow: 0 0 18px rgba(212,175,55,.5);
-}
-.instrument-item span:last-child {
-  font-size: .68rem; letter-spacing: .1em; color: var(--gray);
-}
+    .service-card:hover {
+      border-color: var(--yellow);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(255,214,0,0.2);
+    }
 
-/* =============================================
-   お知らせ
-============================================= */
-.news-section { background: var(--black); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { font-size: 48px; margin-bottom: 16px; }
 
-.news-list { border-top: 1px solid rgba(212,175,55,.18); }
-.news-item {
-  display: grid; grid-template-columns: 110px 78px 1fr;
-  align-items: center; gap: 1.5rem;
-  padding: 1.2rem 1.5rem;
-  border-bottom: 1px solid rgba(212,175,55,.1);
-  transition: background .3s;
-}
-.news-item:hover { background: rgba(158,12,12,.06); }
+    .service-card h3 {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 12px;
+    }
 
-.news-date {
-  font-size: .78rem; color: var(--gray);
-  letter-spacing: .05em; font-style: normal; white-space: nowrap;
-}
-.news-tag {
-  display: inline-block; font-size: .62rem;
-  padding: .2rem .55rem; letter-spacing: .12em;
-  text-align: center; border: 1px solid var(--red); color: var(--red-b);
-  white-space: nowrap;
-}
-.tag-mv   { border-color: var(--gold);            color: var(--gold); }
-.tag-blog { border-color: #5566aa;                color: #7788cc; }
-.tag-info { border-color: rgba(212,175,55,.6);    color: var(--gold); }
+    .service-card p {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+    }
 
-.news-title-link {
-  font-size: .88rem; color: var(--cream);
-  letter-spacing: .04em; transition: color .3s;
-}
-.news-title-link:hover { color: var(--gold); }
+    .service-card .price {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--yellow);
+      font-weight: 700;
+      background: rgba(255,214,0,0.1);
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
 
-/* =============================================
-   リンク
-============================================= */
-.links-section {
-  background:
-    linear-gradient(180deg, var(--black) 0%, #110510 50%, var(--black) 100%);
-}
-.links-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
-  gap: 1.4rem; max-width: 920px; margin: 0 auto;
-}
-.link-card {
-  display: flex; align-items: center; gap: 1.2rem;
-  padding: 1.4rem 1.5rem;
-  border: 1px solid rgba(212,175,55,.32);
-  background: rgba(212,175,55,.03);
-  position: relative; overflow: hidden;
-  transition: transform .3s, box-shadow .3s, border-color .3s, background .3s;
-}
-.link-card::before {
-  content: ''; position: absolute; left:0; top:0; bottom:0;
-  width: 3px; background: var(--red-b);
-  transform: scaleY(0); transform-origin: bottom; transition: transform .3s;
-}
-.link-card:hover::before { transform: scaleY(1); }
-.link-card:hover {
-  transform: translateX(5px);
-  border-color: rgba(158,12,12,.4);
-  background: rgba(158,12,12,.08);
-  box-shadow: 0 0 22px rgba(158,12,12,.22);
-}
-.link-icon { color: var(--red-b); flex-shrink:0; transition: color .3s; }
-.link-card:hover .link-icon { color: var(--gold); }
-.link-name { font-size:.98rem; font-weight:700; color:var(--cream); letter-spacing:.05em; display:block; }
-.link-desc { font-size:.72rem; color:var(--gray); letter-spacing:.06em; display:block; margin-top:.15rem; }
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+    }
 
-/* =============================================
-   ボタン
-============================================= */
-.center-btn { text-align: center; margin-top: 3rem; }
-.btn-outline {
-  display: inline-block;
-  border: 1px solid var(--gold); color: var(--gold);
-  padding: .85rem 2.6rem; font-size: .82rem; letter-spacing: .28em;
-  font-family: var(--font);
-  position: relative; overflow: hidden; transition: color .3s;
-}
-.btn-outline::before {
-  content: ''; position: absolute; inset: 0;
-  background: var(--gold); transform: translateX(-101%); transition: transform .32s ease;
-}
-.btn-outline:hover { color: var(--black); }
-.btn-outline:hover::before { transform: translateX(0); }
-.btn-outline span { position: relative; z-index: 1; }
+    .reason-card {
+      text-align: center;
+      padding: 32px 24px;
+    }
 
-/* =============================================
-   フッター
-============================================= */
-.footer {
-  padding: 3.5rem 0 2.5rem;
-  border-top: 1px solid rgba(212,175,55,.14);
-  text-align: center; background: var(--black);
-}
-.footer-logo {
-  font-size: 2rem; font-weight: 900; color: var(--gold);
-  opacity: .35; letter-spacing: .22em; margin-bottom: .8rem;
-}
-.footer-copy { font-size: .72rem; color: var(--gray); letter-spacing: .12em; }
+    .reason-number {
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+      opacity: 0.3;
+      margin-bottom: -10px;
+    }
 
-/* フッター SNS ボタン */
-.footer-sns {
-  display: flex; flex-wrap: wrap;
-  justify-content: center; gap: .75rem;
-  margin-bottom: 1.8rem;
-}
-.footer-sns-btn {
-  display: inline-flex; align-items: center; gap: .5rem;
-  padding: .5rem 1.2rem;
-  border: 1px solid rgba(212,175,55,.3);
-  color: rgba(240,230,211,.7);
-  font-size: .78rem; letter-spacing: .1em;
-  transition: border-color .3s, color .3s, background .3s;
-}
-.footer-sns-btn:hover {
-  border-color: var(--red-b);
-  color: var(--cream);
-  background: rgba(158,12,12,.1);
-}
+    .reason-card h3 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
 
-/* About リスト */
-.about-list {
-  list-style: none; margin-bottom: 1.2rem;
-}
-.about-list li {
-  font-size: .9rem; color: rgba(240,230,211,.82);
-  line-height: 1.9; padding-left: 1.2em; position: relative;
-}
-.about-list li:empty { display: none; }
-.about-list li::before {
-  content: '◆';
-  position: absolute; left: 0;
-  color: var(--red-b); font-size: .5rem;
-  top: .6em;
-}
+    .reason-card p {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+    }
 
-/* =============================================
-   アニメーション
-============================================= */
-@keyframes fadeUp {
-  from { opacity:0; transform: translateY(26px); }
-  to   { opacity:1; transform: translateY(0); }
-}
+    .flow-bg { background: var(--black-soft); }
 
-.fade-in {
-  opacity: 0; transform: translateY(28px);
-  transition: opacity .65s ease, transform .65s ease;
-}
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+    .flow-steps {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
 
-/* =============================================
-   レスポンシブ：タブレット（〜1024px）
-============================================= */
-/* タブレット：2列均等 */
-@media (max-width: 1024px) {
-  .videos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  .video-card.featured { grid-column: span 1; }
-}
+    .flow-step {
+      flex: 1;
+      min-width: 180px;
+      padding: 32px 24px;
+      position: relative;
+      text-align: center;
+    }
 
-/* =============================================
-   レスポンシブ：スマホ（〜768px）
-============================================= */
-@media (max-width: 768px) {
-  .nav-toggle { display: flex; }
+    .flow-step:not(:last-child)::after {
+      content: '▶';
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--yellow);
+      font-size: 20px;
+      z-index: 1;
+    }
 
-  .nav-menu {
-    position: fixed; top:0; right:0; bottom:0;
-    width: 72vw; max-width: 280px;
-    background: rgba(14,10,10,.97);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    padding: 5.5rem 2rem 2rem; gap: 1.8rem;
-    border-left: 1px solid rgba(212,175,55,.18);
-    z-index: 1000;
-    transform: translateX(100%); transition: transform .35s ease;
-  }
-  .nav-menu.open { transform: translateX(0); }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      background: var(--yellow);
+      color: var(--black);
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
 
-  .section { padding: 4rem 0; }
+    .flow-step h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .flow-step p { font-size: 14px; color: #aaa; }
 
-  /* スマホ：1列 */
-  .videos-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-  .video-card.featured { grid-column: span 1; }
+    .warning-section {
+      padding: 60px 40px;
+      background: var(--black-soft);
+    }
 
-  .about-content { grid-template-columns: 1fr; gap: 2.5rem; }
+    .warning-box {
+      max-width: 900px;
+      margin: 0 auto;
+      border: 3px solid var(--yellow);
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
-  .news-item { grid-template-columns: 1fr; gap:.4rem; padding: 1rem; }
+    .warning-header {
+      background: var(--yellow);
+      color: var(--black);
+      padding: 16px 32px;
+      font-size: 22px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-  .links-grid { grid-template-columns: 1fr; }
-}
+    .warning-body {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
 
-/* =============================================
-   レスポンシブ：小画面（〜480px）
-============================================= */
-@media (max-width: 480px) {
-  .instrument-grid { grid-template-columns: repeat(2,1fr); }
-  .hero-cta { padding: .9rem 1.8rem; font-size: .92rem; }
-  .section-sub { margin-bottom: 2.5rem; }
-  .hero-title-main { font-size: clamp(3rem, 14vw, 5rem); }
-}
+    .warning-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .warning-item .dot {
+      width: 20px;
+      height: 20px;
+      background: var(--red);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .warning-item p { font-size: 15px; line-height: 1.6; color: #ddd; }
+
+    .cta-section {
+      text-align: center;
+      padding: 100px 40px;
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          transparent 0px, transparent 30px,
+          rgba(255,214,0,0.03) 30px, rgba(255,214,0,0.03) 60px
+        ),
+        var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before, .cta-section::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,214,0,0.05);
+    }
+    .cta-section::before { top: -100px; left: -100px; }
+    .cta-section::after { bottom: -100px; right: -100px; }
+
+    .cta-section h2 {
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .cta-section > p {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 48px;
+    }
+
+    .cta-tel-big {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: 4px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      text-shadow: 0 0 40px rgba(255,214,0,0.4);
+    }
+
+    .cta-time { font-size: 14px; color: #888; margin-bottom: 40px; }
+
+    footer {
+      background: #080808;
+      border-top: 3px solid #222;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+
+    footer p { font-size: 13px; color: #555; margin-top: 24px; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--black-soft);
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .stars { color: var(--yellow); font-size: 20px; margin-bottom: 12px; }
+
+    .review-card p {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .reviewer { font-size: 13px; color: #666; font-weight: 700; }
+
+    @media (max-width: 768px) {
+      header { padding: 12px 20px; flex-direction: column; gap: 12px; }
+      .hero-content { padding: 60px 20px; }
+      .hero-hornet { opacity: 0.15; right: -50px; }
+      section { padding: 60px 20px; }
+      .flow-step:not(:last-child)::after { display: none; }
+      .features-strip { gap: 24px; padding: 20px; }
+    }
+
+    .float-contact {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      font-size: 14px;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(255,23,68,0.5);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ナビゲーション -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo" style="white-space:nowrap">和楽器ロック</a>
-      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#videos"  class="nav-link">動画</a></li>
-        <li><a href="#about"   class="nav-link">プロフィール</a></li>
-        <li><a href="#news"    class="nav-link">お知らせ</a></li>
-        <li><a href="#links"   class="nav-link">リンク</a></li>
-      </ul>
+<div class="danger-stripe"></div>
+
+<header>
+  <div class="logo">
+    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="24" cy="30" rx="10" ry="14" fill="#FFD600"/>
+      <rect x="14" y="26" width="20" height="4" fill="#0d0d0d"/>
+      <rect x="14" y="32" width="20" height="4" fill="#0d0d0d"/>
+      <ellipse cx="24" cy="16" rx="8" ry="8" fill="#FFD600"/>
+      <circle cx="20" cy="14" r="2.5" fill="#0d0d0d"/>
+      <circle cx="28" cy="14" r="2.5" fill="#0d0d0d"/>
+      <ellipse cx="10" cy="20" rx="10" ry="4" fill="rgba(255,255,255,0.3)" transform="rotate(-30 10 20)"/>
+      <ellipse cx="38" cy="20" rx="10" ry="4" fill="rgba(255,255,255,0.3)" transform="rotate(30 38 20)"/>
+      <polygon points="24,44 21,42 27,42" fill="#FFD600"/>
+    </svg>
+    <div class="logo-text">BEE <span>BUSTER</span></div>
+  </div>
+  <div class="header-tel">
+    <div class="label">&#9889; 緊急蜂駆除 24時間受付</div>
+    <div class="number">090-9942-2501</div>
+    <a href="#contact" class="cta-btn">無料見積もり</a>
+  </div>
+</header>
+
+<section class="hero" style="max-width:100%; padding:0;">
+  <div class="hero-content">
+    <div class="hero-badge">&#9888;&#65039; 危険！発見したらすぐ連絡</div>
+    <h1>
+      蜂を<span class="yellow">今すぐ</span><br>
+      <span class="outline">完全駆除</span><br>
+      します。
+    </h1>
+    <p>愛知・岐阜・三重のスズメバチ・アシナガバチ・ミツバチ駆除はBee Busterへ。即日対応・豊富な実績・安心の保証付き。</p>
+    <div class="hero-buttons">
+      <a href="tel:09099422501" class="btn-primary">&#9889; 今すぐ電話する</a>
+      <a href="#contact" class="btn-secondary">無料見積もりを依頼</a>
     </div>
-  </nav>
+  </div>
 
-  <!-- ヒーロー -->
-  <section class="hero" id="home">
-    <div class="hero-pattern" aria-hidden="true"></div>
-    <div class="hero-sparks" aria-hidden="true">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
+  <svg class="hero-hornet" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="120" cy="220" rx="120" ry="50" fill="rgba(255,255,255,0.12)" transform="rotate(-25 120 220)"/>
+    <ellipse cx="380" cy="220" rx="120" ry="50" fill="rgba(255,255,255,0.12)" transform="rotate(25 380 220)"/>
+    <ellipse cx="130" cy="270" rx="90" ry="35" fill="rgba(255,255,255,0.08)" transform="rotate(-20 130 270)"/>
+    <ellipse cx="370" cy="270" rx="90" ry="35" fill="rgba(255,255,255,0.08)" transform="rotate(20 370 270)"/>
+    <ellipse cx="250" cy="430" rx="85" ry="130" fill="#FFD600"/>
+    <rect x="165" y="330" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <rect x="165" y="368" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <rect x="165" y="406" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <rect x="165" y="444" width="170" height="22" rx="4" fill="#0d0d0d"/>
+    <ellipse cx="250" cy="430" rx="85" ry="130" fill="url(#abd)" opacity="0.4"/>
+    <defs>
+      <radialGradient id="abd" cx="30%" cy="30%">
+        <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="black" stop-opacity="0.4"/>
+      </radialGradient>
+      <radialGradient id="eye1" cx="40%" cy="40%">
+        <stop offset="0%" stop-color="#FF4444"/>
+        <stop offset="100%" stop-color="#880000"/>
+      </radialGradient>
+    </defs>
+    <polygon points="250,555 238,515 262,515" fill="#FFD600"/>
+    <polygon points="250,575 242,550 258,550" fill="#cc8800"/>
+    <ellipse cx="250" cy="265" rx="65" ry="60" fill="#1a1200"/>
+    <ellipse cx="250" cy="255" rx="58" ry="50" fill="#FFD600"/>
+    <ellipse cx="250" cy="255" rx="58" ry="50" fill="url(#abd)" opacity="0.5"/>
+    <line x1="190" y1="270" x2="100" y2="310" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="190" y1="285" x2="95" y2="340" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="195" y1="300" x2="100" y2="370" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="310" y1="270" x2="400" y2="310" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="310" y1="285" x2="405" y2="340" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="305" y1="300" x2="400" y2="370" stroke="#0d0d0d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="100" y1="310" x2="70" y2="350" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="95" y1="340" x2="65" y2="380" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="100" y1="370" x2="70" y2="415" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="400" y1="310" x2="430" y2="350" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="405" y1="340" x2="435" y2="380" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="400" y1="370" x2="430" y2="415" stroke="#0d0d0d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="250" cy="160" rx="72" ry="68" fill="#FFD600"/>
+    <ellipse cx="250" cy="160" rx="72" ry="68" fill="url(#abd)" opacity="0.3"/>
+    <ellipse cx="208" cy="150" rx="28" ry="32" fill="url(#eye1)"/>
+    <ellipse cx="292" cy="150" rx="28" ry="32" fill="url(#eye1)"/>
+    <ellipse cx="200" cy="140" rx="8" ry="10" fill="rgba(255,255,255,0.35)"/>
+    <ellipse cx="284" cy="140" rx="8" ry="10" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="208" cy="148" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="220" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="196" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="292" cy="148" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="304" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <circle cx="280" cy="158" r="6" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+    <path d="M 220 195 Q 200 215 215 230" stroke="#0d0d0d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 280 195 Q 300 215 285 230" stroke="#0d0d0d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 225 232 Q 250 248 275 232" stroke="#0d0d0d" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 225 100 Q 200 60 185 30" stroke="#0d0d0d" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 275 100 Q 300 60 315 30" stroke="#0d0d0d" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="183" cy="28" r="8" fill="#0d0d0d"/>
+    <circle cx="317" cy="28" r="8" fill="#0d0d0d"/>
+    <rect x="215" y="130" width="70" height="12" rx="6" fill="#0d0d0d"/>
+    <rect x="210" y="148" width="80" height="10" rx="5" fill="#0d0d0d"/>
+  </svg>
+</section>
+
+<div class="features-strip">
+  <div class="feature-item"><span class="icon">&#9889;</span>即日対応</div>
+  <div class="feature-item"><span class="icon">&#128737;</span>再発保証付き</div>
+  <div class="feature-item"><span class="icon">&#128175;</span>見積り無料</div>
+  <div class="feature-item"><span class="icon">&#127942;</span>施工実績多数</div>
+  <div class="feature-item"><span class="icon">&#127769;</span>24時間受付</div>
+</div>
+
+<div class="services-bg">
+  <section>
+    <div class="section-title">
+      <span class="en">Services</span>
+      <h2>対応する<span class="accent">蜂の種類</span></h2>
+      <div class="line"></div>
     </div>
-
-    <div class="hero-content">
-      <div class="hero-badge">和楽器 × ROCK</div>
-
-      <h1 class="hero-title">
-        <span class="hero-title-main">和楽器ロック</span>
-        <span class="hero-title-sub">WAGAKKI ROCK</span>
-      </h1>
-
-      <div class="hero-divider" aria-hidden="true">
-        <span class="hdl hdl-l"></span>
-        <span class="hdo">◆</span>
-        <span class="hdl hdl-r"></span>
-      </div>
-
-      <p class="hero-catchcopy">
-        古の音が、闇を切り裂く。<br>
-        伝統と咆哮が交差する場所で、新たな魂が生まれる。
-      </p>
-
-      <!--
-        ★【最新MVを見る】ボタンのリンク先設定
-        ────────────────────────────────────────
-        ▶ チャンネルのトップページに飛ばす場合:
-            href="https://www.youtube.com/channel/UCferqyV83L0ZsnV_smAsTsQ"
-
-        ▶ 特定の動画に直接飛ばす場合:
-            href="https://www.youtube.com/watch?v=動画ID"
-            （YouTubeで動画を開いたときのURLの "v=" 以降の文字列が動画IDです）
-
-        ▶ 同じページ内の動画枠にスクロールさせる場合:
-            href="#video-1"  ← 下の動画カードの id と一致させてください
-        ────────────────────────────────────────
-      -->
-      <a href="https://www.youtube.com/channel/UCferqyV83L0ZsnV_smAsTsQ"
-         target="_blank" rel="noopener" class="hero-cta">
-        <span class="cta-play" aria-hidden="true">▶</span>
-        最新MVを見る
-      </a>
-    </div>
-
-    <div class="hero-scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- 動画 -->
-  <section class="section videos-section" id="videos">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="tdeco">—</span>Discography / Videos<span class="tdeco">—</span>
-      </h2>
-      <p class="section-sub">楽曲・ミュージックビデオ</p>
-
-      <!--
-        ★【動画の埋め込み方法】
-        ════════════════════════════════════════
-        1. YouTubeで掲載したい動画を開く
-        2. 動画の下の「共有」ボタンをクリック
-        3. 「埋め込む」を選択
-        4. 表示された <iframe ...> ～ </iframe> のコードをコピー
-        5. 各動画カード内の「video-placeholder の div」を削除し、
-           コピーしたiframeコードを貼り付ける
-        ════════════════════════════════════════
-      -->
-      <div class="videos-grid">
-
-        <!-- ============================================================
-             動画スロット①：最新MV（大きく2列分表示）
-             ★ id="video-1" は「最新MVを見る」ボタンのリンク先です
-        ============================================================ -->
-        <div class="video-card featured" id="video-1">
-          <div class="video-wrapper">
-
-            <!-- =========================================
-                 ★ 動画① の動画ID を変更する場合:
-                 src の末尾 "LGBTEZp2MII" の部分だけ書き換えてください
-                 YouTubeのURL例: https://youtu.be/【ここが動画ID】
-                 ========================================= -->
-            <iframe
-              src="https://www.youtube.com/embed/LTbasbY3FhE"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-          </div>
-          <div class="video-info">
-            <span class="video-badge">NEW</span>
-            <h3 class="video-title">心を燃やせ / 煉獄杏寿郎</h3>
-            <!-- ★ 説明文を追加したい場合はここに記入（不要なら削除OK） -->
-            <p class="video-desc"></p>
-          </div>
-        </div>
-
-        <!-- ============================================================
-             動画スロット②
-        ============================================================ -->
-        <div class="video-card" id="video-2">
-          <div class="video-wrapper">
-
-            <!-- =========================================
-                 ★ 動画② の動画ID を変更する場合:
-                 src の末尾 "LLGJfnqMwk8" の部分だけ書き換えてください
-                 YouTubeのURL例: https://youtu.be/【ここが動画ID】
-                 ========================================= -->
-            <iframe
-              src="https://www.youtube.com/embed/LLGJfnqMwk8"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-          </div>
-          <div class="video-info">
-            <h3 class="video-title">是非に及ばず / 織田信長</h3>
-          </div>
-        </div>
-
-        <!-- ============================================================
-             動画スロット③
-        ============================================================ -->
-        <div class="video-card" id="video-3">
-          <div class="video-wrapper">
-
-            <!-- =========================================
-                 ★ 動画③ の動画ID を変更する場合:
-                 src の末尾 "WqxvXbC4Pv8" の部分だけ書き換えてください
-                 YouTubeのURL例: https://youtu.be/【ここが動画ID】
-                 ========================================= -->
-            <iframe
-              src="https://www.youtube.com/embed/WqxvXbC4Pv8"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-          </div>
-          <div class="video-info">
-            <h3 class="video-title">時の河</h3>
-          </div>
-        </div>
-
-      </div><!-- /videos-grid -->
-
-      <div class="center-btn">
-        <a href="https://www.youtube.com/channel/UCferqyV83L0ZsnV_smAsTsQ" target="_blank" rel="noopener" class="btn-outline">
-          <span>チャンネルで全動画を見る</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- プロフィール -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="tdeco">—</span>About<span class="tdeco">—</span>
-      </h2>
-      <p class="section-sub">プロフィール</p>
-
-      <div class="about-content">
-        <!-- 左カラム：テキスト -->
-        <div class="about-text">
-
-          <h3 class="about-heading">活動理念</h3>
-          <!-- ★ 活動理念・コンセプトを書いてください -->
-          <p class="about-body">
-            日本古来の和楽器が持つ深く神秘的な音色と、ロックの持つ力強い咆哮を融合させ、
-            新たな音楽の地平を切り拓く。伝統を敬いながらも、既存の枠を壊す。
-            その矛盾の中にこそ、本物の表現が宿ると信じている。
-          </p>
-
-          <h3 class="about-heading">プロフィール</h3>
-          <!-- ★ 以下のダミー文を、実際の自己紹介に書き換えてください -->
-          <p class="about-body">
-            活動名：<strong style="color:var(--gold)">和楽器<wbr>ロック</strong>（WAGAKKI ROCK）<br>
-            活動開始：20XX年<br>
-            拠点：日本
-          </p>
-          <p class="about-body">
-            <!-- ★ 自己紹介・活動歴をここに記入してください -->
-            和楽器とロックの融合をテーマに、YouTubeを中心に活動中。
-            伝統楽器の奥深い表現力と、エレキギター・ベースのグルーヴを組み合わせた
-            オリジナルサウンドを追求しています。
-          </p>
-
-          <h3 class="about-heading">活動内容</h3>
-          <!-- ★ 活動内容のリストを書き換えてください -->
-          <ul class="about-list">
-            <li>YouTube にてオリジナル楽曲・カバー動画を定期配信</li>
-            <li><!-- ★ その他の活動があれば追加してください --></li>
-          </ul>
-
-        </div>
-
-        <!-- 右カラム：使用楽器 -->
-        <div class="instruments">
-          <h3 class="about-heading">使用楽器</h3>
-          <!-- ★ 実際に使っていない楽器は削除し、必要なら追加してください -->
-          <div class="instrument-grid">
-            <div class="instrument-item"><div class="instrument-icon">尺</div><span>尺八</span></div>
-            <div class="instrument-item"><div class="instrument-icon">三</div><span>三味線</span></div>
-            <div class="instrument-item"><div class="instrument-icon">箏</div><span>箏・琴</span></div>
-            <div class="instrument-item"><div class="instrument-icon">太</div><span>和太鼓</span></div>
-            <div class="instrument-item"><div class="instrument-icon">G</div><span>エレキギター</span></div>
-            <div class="instrument-item"><div class="instrument-icon">B</div><span>ベース</span></div>
-            <div class="instrument-item"><div class="instrument-icon" style="font-size:1.3rem;letter-spacing:.05em">AI</div><span>AI使用</span></div>
-          </div>
-
-          <h3 class="about-heading" style="margin-top:2rem">チャンネル</h3>
-          <a href="https://www.youtube.com/channel/UCferqyV83L0ZsnV_smAsTsQ"
-             target="_blank" rel="noopener" class="btn-outline" style="font-size:.78rem;padding:.7rem 1.5rem">
-            <span>▶ YouTubeで見る</span>
-          </a>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- お知らせ -->
-  <section class="section news-section" id="news">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="tdeco">—</span>News &amp; Blog<span class="tdeco">—</span>
-      </h2>
-      <p class="section-sub">お知らせ・ブログ</p>
-
-      <!-- ★ お知らせがあれば以下の形式で追加してください
-      <ul class="news-list">
-        <li class="news-item">
-          <time class="news-date" datetime="2026-00-00">2026.00.00</time>
-          <span class="news-tag tag-info">INFO</span>
-          <a href="#" class="news-title-link">お知らせのタイトル</a>
-        </li>
-      </ul>
-      -->
-      <p style="text-align:center; color:var(--gray); font-size:.88rem; letter-spacing:.12em; padding: 2rem 0;">
-        現在、お知らせはありません。
-      </p>
-
-      <div class="center-btn">
-        <a href="https://your-blog-url.example.com" target="_blank" rel="noopener" class="btn-outline">
-          <span>ブログで全記事を見る</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- リンク -->
-  <section class="section links-section" id="links">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="tdeco">—</span>Links<span class="tdeco">—</span>
-      </h2>
-      <p class="section-sub">SNS・リンク</p>
-
-      <div class="links-grid">
-
-        <a href="https://www.youtube.com/channel/UCferqyV83L0ZsnV_smAsTsQ" target="_blank" rel="noopener" class="link-card">
-          <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="34" height="34" aria-hidden="true">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-          </div>
-          <div><span class="link-name">YouTube</span><span class="link-desc">チャンネルを見る</span></div>
-        </a>
-
-        <!-- ★ href を自分のXアカウントURLに変更 -->
-        <a href="https://x.com/YOUR_ACCOUNT" target="_blank" rel="noopener" class="link-card">
-          <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="34" height="34" aria-hidden="true">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-          </div>
-          <div><span class="link-name">X (Twitter)</span><span class="link-desc">フォローする</span></div>
-        </a>
-
-        <!-- ★ href を自分のTikTokアカウントURLに変更 -->
-        <a href="https://www.tiktok.com/@YOUR_ACCOUNT" target="_blank" rel="noopener" class="link-card">
-          <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="34" height="34" aria-hidden="true">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
-            </svg>
-          </div>
-          <div><span class="link-name">TikTok</span><span class="link-desc">ショート動画を見る</span></div>
-        </a>
-
-        <!-- ★ href を自分のブログURLに変更 -->
-        <a href="https://your-blog-url.example.com" target="_blank" rel="noopener" class="link-card">
-          <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="34" height="34" aria-hidden="true">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-            </svg>
-          </div>
-          <div><span class="link-name">ブログ</span><span class="link-desc">活動記録を読む</span></div>
-        </a>
-
-        <!-- ★ mailto: を自分のメールアドレスに変更 -->
-        <a href="mailto:your-email@example.com" class="link-card">
-          <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="34" height="34" aria-hidden="true">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-          </div>
-          <div><span class="link-name">お問い合わせ</span><span class="link-desc">メールで連絡する</span></div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- フッター -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-logo">和楽器<wbr>ロック</p>
-
-      <!-- SNSリンクボタン（横並び） -->
-      <div class="footer-sns">
-
-        <!-- ★ YouTubeチャンネル（設定済み） -->
-        <a href="https://www.youtube.com/channel/UCferqyV83L0ZsnV_smAsTsQ"
-           target="_blank" rel="noopener" class="footer-sns-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <div class="services-grid">
+      <div class="service-card">
+        <!-- スズメバチ：太い体・オレンジの頭・力強い顎 -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 88" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 後翅 -->
+            <ellipse cx="16" cy="36" rx="17" ry="6" fill="rgba(200,230,255,0.55)" transform="rotate(-18 16 36)"/>
+            <ellipse cx="64" cy="36" rx="17" ry="6" fill="rgba(200,230,255,0.55)" transform="rotate(18 64 36)"/>
+            <!-- 前翅 -->
+            <ellipse cx="20" cy="28" rx="20" ry="7" fill="rgba(200,230,255,0.7)" transform="rotate(-22 20 28)"/>
+            <ellipse cx="60" cy="28" rx="20" ry="7" fill="rgba(200,230,255,0.7)" transform="rotate(22 60 28)"/>
+            <!-- 脚 -->
+            <line x1="28" y1="46" x2="8"  y2="62" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="30" y1="50" x2="12" y2="70" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="52" y1="46" x2="72" y2="62" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="50" y1="50" x2="68" y2="70" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="32" y1="44" x2="14" y2="56" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="48" y1="44" x2="66" y2="56" stroke="#5D3A1A" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- 腹部（太い・黄黒縞） -->
+            <ellipse cx="40" cy="62" rx="17" ry="22" fill="#FFB300"/>
+            <rect x="23" y="47" width="34" height="7"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="57" width="34" height="7"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="67" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="76" width="34" height="5"  rx="3" fill="#1a1a1a"/>
+            <!-- 針 -->
+            <polygon points="40,84 36,79 44,79" fill="#FFB300"/>
+            <polygon points="40,88 37,83 43,83" fill="#CC7700"/>
+            <!-- 胸部（茶色・太い） -->
+            <ellipse cx="40" cy="40" rx="13" ry="10" fill="#6D4C41"/>
+            <!-- 頭部（オレンジ色 ← スズメバチの特徴） -->
+            <ellipse cx="40" cy="24" rx="14" ry="13" fill="#E65100"/>
+            <!-- 複眼（大きい・赤みがかった黒） -->
+            <ellipse cx="32" cy="22" rx="6" ry="7" fill="#1a0000"/>
+            <ellipse cx="48" cy="22" rx="6" ry="7" fill="#1a0000"/>
+            <ellipse cx="30" cy="20" rx="2" ry="2.5" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="46" cy="20" rx="2" ry="2.5" fill="rgba(255,255,255,0.25)"/>
+            <!-- 顎（スズメバチの力強い大顎） -->
+            <path d="M33 33 Q26 39 29 43" stroke="#4E342E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <path d="M47 33 Q54 39 51 43" stroke="#4E342E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <!-- 触角 -->
+            <path d="M34 13 Q29 6 26 2" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M46 13 Q51 6 54 2" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <circle cx="26" cy="2" r="2.5" fill="#3E2723"/>
+            <circle cx="54" cy="2" r="2.5" fill="#3E2723"/>
           </svg>
-          YouTube
-        </a>
-
-        <!-- ★ X（旧Twitter）― href を自分のURLに変更してください -->
-        <a href="https://x.com/YOUR_ACCOUNT"
-           target="_blank" rel="noopener" class="footer-sns-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </div>
+        <h3>スズメバチ駆除</h3>
+        <p>最も危険なスズメバチの巣を安全に駆除。オオスズメバチ・コガタスズメバチ・キイロスズメバチなど全種対応。養生・巣の撤去・処分・簡易清掃・防虫施工まで含みます。</p>
+        <div class="price">¥2,100円〜（税込）</div>
+      </div>
+      <div class="service-card">
+        <!-- アシナガバチ：細い腰・長い後脚が垂れ下がる・スリムな体型 -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 96" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 翅（細め） -->
+            <ellipse cx="18" cy="30" rx="17" ry="5" fill="rgba(200,230,255,0.7)" transform="rotate(-18 18 30)"/>
+            <ellipse cx="62" cy="30" rx="17" ry="5" fill="rgba(200,230,255,0.7)" transform="rotate(18 62 30)"/>
+            <ellipse cx="21" cy="38" rx="13" ry="4" fill="rgba(200,230,255,0.5)" transform="rotate(-15 21 38)"/>
+            <ellipse cx="59" cy="38" rx="13" ry="4" fill="rgba(200,230,255,0.5)" transform="rotate(15 59 38)"/>
+            <!-- 長い後脚（垂れ下がる ← アシナガバチの最大の特徴） -->
+            <path d="M30 42 Q14 60 8 82" stroke="#795548" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M50 42 Q66 60 72 82" stroke="#795548" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- 中脚 -->
+            <line x1="28" y1="40" x2="10" y2="58" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <line x1="52" y1="40" x2="70" y2="58" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <!-- 前脚 -->
+            <line x1="30" y1="36" x2="16" y2="50" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <line x1="50" y1="36" x2="64" y2="50" stroke="#795548" stroke-width="2" stroke-linecap="round"/>
+            <!-- 細い腰（ペティオール ← アシナガバチの特徴） -->
+            <line x1="40" y1="44" x2="40" y2="54" stroke="#795548" stroke-width="3" stroke-linecap="round"/>
+            <!-- 腹部（細長い・先細り） -->
+            <ellipse cx="40" cy="70" rx="11" ry="20" fill="#F9A825"/>
+            <rect x="29" y="56" width="22" height="5" rx="2.5" fill="#4E342E"/>
+            <rect x="29" y="64" width="22" height="5" rx="2.5" fill="#4E342E"/>
+            <rect x="29" y="72" width="22" height="5" rx="2.5" fill="#4E342E"/>
+            <rect x="30" y="80" width="20" height="4" rx="2"   fill="#4E342E"/>
+            <!-- 針 -->
+            <polygon points="40,90 37,85 43,85" fill="#F9A825"/>
+            <polygon points="40,95 38,89 42,89" fill="#9E6B00"/>
+            <!-- 胸部（小さい） -->
+            <ellipse cx="40" cy="38" rx="10" ry="8" fill="#795548"/>
+            <!-- 頭部（小さめ・丸い） -->
+            <ellipse cx="40" cy="24" rx="10" ry="10" fill="#F9A825"/>
+            <!-- 複眼 -->
+            <ellipse cx="34" cy="23" rx="4" ry="5" fill="#1a0000"/>
+            <ellipse cx="46" cy="23" rx="4" ry="5" fill="#1a0000"/>
+            <ellipse cx="33" cy="21" rx="1.5" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="45" cy="21" rx="1.5" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <!-- 触角 -->
+            <path d="M35 15 Q31 8 29 4" stroke="#4E342E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M45 15 Q49 8 51 4" stroke="#4E342E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="29" cy="4" r="2" fill="#4E342E"/>
+            <circle cx="51" cy="4" r="2" fill="#4E342E"/>
           </svg>
-          X (Twitter)
-        </a>
-
-        <!-- ★ ブログ ― href を自分のブログURLに変更してください -->
-        <a href="https://your-blog-url.example.com"
-           target="_blank" rel="noopener" class="footer-sns-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        </div>
+        <h3>アシナガバチ駆除</h3>
+        <p>軒先や植木に巣を作るアシナガバチを駆除。早期発見・早期駆除で被害を最小限に。養生・巣の撤去・処分・簡易清掃・防虫施工まで対応します。</p>
+        <div class="price">¥1,700円〜（税込）</div>
+      </div>
+      <div class="service-card">
+        <!-- ミツバチ：丸い体・毛がふさふさ・後脚に花粉かご -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 84" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 後翅（小さめ） -->
+            <ellipse cx="17" cy="34" rx="15" ry="7" fill="rgba(200,230,255,0.6)" transform="rotate(-20 17 34)"/>
+            <ellipse cx="63" cy="34" rx="15" ry="7" fill="rgba(200,230,255,0.6)" transform="rotate(20 63 34)"/>
+            <!-- 前翅 -->
+            <ellipse cx="20" cy="26" rx="18" ry="8" fill="rgba(200,230,255,0.75)" transform="rotate(-26 20 26)"/>
+            <ellipse cx="60" cy="26" rx="18" ry="8" fill="rgba(200,230,255,0.75)" transform="rotate(26 60 26)"/>
+            <!-- 脚 -->
+            <line x1="30" y1="46" x2="14" y2="60" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="32" y1="50" x2="18" y2="67" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="50" y1="46" x2="66" y2="60" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="48" y1="50" x2="62" y2="67" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="28" y1="43" x2="12" y2="53" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <line x1="52" y1="43" x2="68" y2="53" stroke="#5D3A1A" stroke-width="2" stroke-linecap="round"/>
+            <!-- 花粉かご（後脚の黄色い塊 ← ミツバチの特徴） -->
+            <ellipse cx="16" cy="64" rx="5" ry="3.5" fill="#FFD600" transform="rotate(-30 16 64)"/>
+            <ellipse cx="64" cy="64" rx="5" ry="3.5" fill="#FFD600" transform="rotate(30 64 64)"/>
+            <!-- 腹部（丸みのある・橙黄色） -->
+            <ellipse cx="40" cy="60" rx="17" ry="19" fill="#FF8F00"/>
+            <!-- 毛の質感（縞を太めに丸くして毛っぽく） -->
+            <rect x="23" y="47" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="56" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="23" y="65" width="34" height="6"  rx="3" fill="#1a1a1a"/>
+            <rect x="24" y="74" width="32" height="4"  rx="2" fill="#1a1a1a"/>
+            <!-- 針 -->
+            <polygon points="40,79 37,75 43,75" fill="#FF8F00"/>
+            <!-- 胸部（毛っぽく・丸い） -->
+            <ellipse cx="40" cy="38" rx="14" ry="11" fill="#FFA000"/>
+            <!-- 毛のテクスチャ（胸部） -->
+            <ellipse cx="40" cy="38" rx="14" ry="11" fill="none" stroke="#CC7700" stroke-width="1" stroke-dasharray="2,3" opacity="0.5"/>
+            <!-- 頭部（丸め） -->
+            <ellipse cx="40" cy="22" rx="12" ry="11" fill="#FFA000"/>
+            <!-- 複眼（丸い） -->
+            <ellipse cx="33" cy="21" rx="5" ry="5.5" fill="#1a0000"/>
+            <ellipse cx="47" cy="21" rx="5" ry="5.5" fill="#1a0000"/>
+            <ellipse cx="31" cy="19" rx="1.8" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="45" cy="19" rx="1.8" ry="2" fill="rgba(255,255,255,0.25)"/>
+            <!-- 触角（短め・ミツバチらしく） -->
+            <path d="M35 12 Q32 6 31 3" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M45 12 Q48 6 49 3" stroke="#3E2723" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <circle cx="31" cy="3" r="2.5" fill="#3E2723"/>
+            <circle cx="49" cy="3" r="2.5" fill="#3E2723"/>
           </svg>
-          ブログ
-        </a>
-
-        <!-- ★ TikTok ― href を自分のURLに変更してください -->
-        <a href="https://www.tiktok.com/@YOUR_ACCOUNT"
-           target="_blank" rel="noopener" class="footer-sns-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+        </div>
+        <h3>ミツバチ・その他駆除</h3>
+        <p>ミツバチをはじめ、あらゆる種類の蜂の巣に対応。作業前に蜂の種類・状況を丁寧に説明してから施工します。</p>
+        <div class="price">料金はお問い合わせください</div>
+      </div>
+      <div class="service-card">
+        <!-- 蜂の巣イラスト -->
+        <div class="service-icon">
+          <svg viewBox="0 0 80 80" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <!-- 吊り紐 -->
+            <line x1="40" y1="2" x2="40" y2="14" stroke="#8D6E63" stroke-width="3" stroke-linecap="round"/>
+            <!-- 巣の層（丸みのある層状構造） -->
+            <ellipse cx="40" cy="22" rx="18" ry="9"  fill="#D7CCC8"/>
+            <ellipse cx="40" cy="31" rx="23" ry="10" fill="#BCAAA4"/>
+            <ellipse cx="40" cy="41" rx="26" ry="11" fill="#D7CCC8"/>
+            <ellipse cx="40" cy="51" rx="24" ry="10" fill="#BCAAA4"/>
+            <ellipse cx="40" cy="60" rx="19" ry="9"  fill="#D7CCC8"/>
+            <ellipse cx="40" cy="68" rx="12" ry="6"  fill="#BCAAA4"/>
+            <!-- 巣の六角形セル（正面） -->
+            <polygon points="40,36 44,38 44,43 40,45 36,43 36,38" fill="#A1887F" opacity="0.7"/>
+            <polygon points="31,36 35,38 35,43 31,45 27,43 27,38" fill="#A1887F" opacity="0.5"/>
+            <polygon points="49,36 53,38 53,43 49,45 45,43 45,38" fill="#A1887F" opacity="0.5"/>
+            <polygon points="40,45 44,47 44,52 40,54 36,52 36,47" fill="#8D6E63" opacity="0.5"/>
+            <polygon points="31,45 35,47 35,52 31,54 27,52 27,47" fill="#8D6E63" opacity="0.3"/>
+            <polygon points="49,45 53,47 53,52 49,54 45,52 45,47" fill="#8D6E63" opacity="0.3"/>
+            <!-- 出入口の穴 -->
+            <ellipse cx="40" cy="68" rx="7" ry="4" fill="#6D4C41"/>
+            <ellipse cx="40" cy="68" rx="4" ry="2.5" fill="#4E342E"/>
+            <!-- 小さな蜂（巣から出てくる） -->
+            <ellipse cx="55" cy="55" rx="5" ry="3.5" fill="#FFB300" transform="rotate(-30 55 55)"/>
+            <rect x="51" y="52" width="8" height="2" rx="1" fill="#1a1a1a" transform="rotate(-30 55 55)"/>
+            <ellipse cx="52" cy="51" rx="4" ry="2" fill="rgba(200,230,255,0.7)" transform="rotate(-50 52 51)"/>
           </svg>
-          TikTok
-        </a>
-
-      </div><!-- /footer-sns -->
-
-      <p class="footer-copy">© 2026 和楽器ロック / WAGAKKI ROCK — All Rights Reserved.</p>
+        </div>
+        <h3>作業内容（全種共通）</h3>
+        <p>&#10003; 養生　&#10003; 蜂の巣撤去・処分　&#10003; 簡易清掃　&#10003; 防虫施工（基本料金に含む）　&#10003; 刺された時の対処法・巣を作らせない対策もアドバイス</p>
+        <div class="price">&#9989; 仕上がり不満の場合は無料追加対応</div>
+      </div>
     </div>
-  </footer>
 
-  <script>
-'use strict';
+    <!-- Pricing Table -->
+    <div style="margin-top: 48px; background: var(--black); border: 2px solid var(--yellow); border-radius: 8px; overflow: hidden;">
+      <div style="background: var(--yellow); color: var(--black); padding: 16px 32px; font-size: 20px; font-weight: 900;">&#128176; 料金表</div>
+      <div style="padding: 8px 0;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+          <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 16px 32px; color: #ccc;">スズメバチ退治</td>
+            <td style="padding: 16px 32px; color: var(--yellow); font-weight: 900; text-align: right;">¥2,100円〜（税込）</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 16px 32px; color: #ccc;">アシナガバチ退治</td>
+            <td style="padding: 16px 32px; color: var(--yellow); font-weight: 900; text-align: right;">¥1,700円〜（税込）</td>
+          </tr>
+        </table>
+      </div>
+      <div style="padding: 12px 32px 4px; border-top: 1px solid #333;">
+        <p style="font-size: 12px; color: #555; margin: 0; line-height: 2;">
+          ※ 高所作業（3m〜）+¥3,000 / 箇所　／　高所作業（7m超）+¥20,000　／　屋根裏への対応 +¥50,000　／　床下への対応 +¥70,000
+        </p>
+      </div>
+      <div style="padding: 16px 32px 20px; background: rgba(255,214,0,0.05); display: flex; flex-direction: column; gap: 12px;">
+        <p style="font-size: 13px; color: #888; margin: 0;">※ 個人事業のため人件費を抑えた低価格でご提供しています。料金は現地確認後にご提示します。</p>
+        <div style="background: var(--red); border-radius: 6px; padding: 14px 24px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 28px; flex-shrink: 0;">&#128196;</span>
+          <p style="font-size: 16px; font-weight: 900; color: var(--white); margin: 0; line-height: 1.5;">他社の見積書をご提示いただければ、<br><span style="color: var(--yellow); font-size: 19px;">それよりもお安く作業いたします！</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
-// ナビ：スクロールで背景変化
-const navbar    = document.getElementById('navbar');
-const navToggle = document.getElementById('navToggle');
-const navMenu   = document.getElementById('navMenu');
+<div class="warning-section">
+  <div class="warning-box">
+    <div class="warning-header">
+      &#9888;&#65039; こんな症状があれば今すぐ連絡を！
+    </div>
+    <div class="warning-body">
+      <div class="warning-item"><div class="dot"></div><p>庭や軒先で蜂が頻繁に飛んでいる</p></div>
+      <div class="warning-item"><div class="dot"></div><p>巣のような構造物を発見した</p></div>
+      <div class="warning-item"><div class="dot"></div><p>蜂に刺されてしまった</p></div>
+      <div class="warning-item"><div class="dot"></div><p>屋根裏や壁の中でブンブン音がする</p></div>
+      <div class="warning-item"><div class="dot"></div><p>子供やペットが蜂に追いかけられた</p></div>
+      <div class="warning-item"><div class="dot"></div><p>去年駆除したのにまた現れた</p></div>
+    </div>
+  </div>
+</div>
 
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+<section>
+  <div class="section-title">
+    <span class="en">Why Bee Buster</span>
+    <h2><span class="accent">選ばれる</span>理由</h2>
+    <div class="line"></div>
+  </div>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-number">01</div>
+      <h3>個人だから安い</h3>
+      <p>個人事業のため人件費がかからない分、大手より料金を抑えてご提供できます。</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-number">02</div>
+      <h3>丁寧・親切な対応</h3>
+      <p>接客業経験が長く、お客様への説明・対応を大切にしています。メッセージは12時間以内に返信します。</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-number">03</div>
+      <h3>不満なら無料再対応</h3>
+      <p>作業や仕上がりにご不満の場合は、無料で追加対応いたします。安心してお任せください。</p>
+    </div>
+    <div class="reason-card">
+      <div class="reason-number">04</div>
+      <h3>室内を汚さない配慮</h3>
+      <p>足カバーを装着してお部屋が汚れないよう細心の注意を払って作業します。</p>
+    </div>
+  </div>
+</section>
 
-// ハンバーガーメニュー
-navToggle.addEventListener('click', () => {
-  const open = navMenu.classList.toggle('open');
-  navToggle.classList.toggle('active', open);
-  navToggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-document.addEventListener('click', (e) => {
-  if (navMenu.classList.contains('open') && !navbar.contains(e.target)) {
-    navMenu.classList.remove('open');
-    navToggle.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
-navMenu.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
-  navMenu.classList.remove('open');
-  navToggle.classList.remove('active');
-  document.body.style.overflow = '';
-}));
+<div class="flow-bg">
+  <section>
+    <div class="section-title">
+      <span class="en">Flow</span>
+      <h2>ご依頼の<span class="accent">流れ</span></h2>
+      <div class="line"></div>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <h3>お電話・お問い合わせ</h3>
+        <p>24時間受付。状況をお聞きします。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <h3>無料見積もり</h3>
+        <p>現地確認の上、料金をご提示します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <h3>駆除・施工</h3>
+        <p>プロが安全に作業を行います。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <h3>巣の撤去・消毒</h3>
+        <p>再発防止処理まで徹底します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <h3>アフターフォロー</h3>
+        <p>保証期間内は無償対応します。</p>
+      </div>
+    </div>
+  </section>
+</div>
 
-// スクロールフェードイン
-const targets = [
-  ...document.querySelectorAll('.video-card'),
-  ...document.querySelectorAll('.instrument-item'),
-  ...document.querySelectorAll('.news-item'),
-  ...document.querySelectorAll('.link-card'),
-  document.querySelector('.about-text'),
-  document.querySelector('.instruments'),
-].filter(Boolean);
+<section>
+  <div class="section-title">
+    <span class="en">Reviews</span>
+    <h2>お客様の<span class="accent">声</span></h2>
+    <div class="line"></div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>庭にスズメバチの巣ができて怖くて電話したところ、1時間以内に来てくれました。作業も迅速で安心できました。</p>
+      <div class="reviewer">名古屋市中村区在住 30代主婦</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>去年に続き今年もお世話になりました。スタッフの方が丁寧に説明してくれて、料金も明確で助かりました。</p>
+      <div class="reviewer">一宮市在住 40代男性</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>屋根裏にミツバチが大量に！即日来てくれて、消毒まで完璧に対応いただきました。価格も思ったよりリーズナブル。</p>
+      <div class="reviewer">岐阜県羽島市在住 50代女性</div>
+    </div>
+  </div>
+</section>
 
-targets.forEach(el => el.classList.add('fade-in'));
+<!-- お客様へのお願い -->
+<div style="background: var(--black); padding: 80px 40px;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <div class="section-title">
+      <span class="en">Important Notes</span>
+      <h2>お客様への<span class="accent">お願い</span></h2>
+      <div class="line"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">1</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">申込時に詳細をお知らせください</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">住所・蜂の種類・巣の位置と大きさなどの情報をお伝えください。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">2</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">作業中は室内でお待ちください</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">安全のため、作業時間中はお客様に室内でお待ちいただきます。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">3</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">事前に荷物の移動をお願いします</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">作業箇所周辺の荷物は、事前に移動しておいてください。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">4</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">2日以上の余裕をもってご予約を</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">ご予約は作業希望日の最低2日前までにお申し込みください。</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; background: var(--black-soft); border-radius: 8px; padding: 24px;">
+        <div style="width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--black); font-weight: 900; font-size: 16px; flex-shrink: 0;">5</div>
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">駐車場のご用意をお願いします</h4>
+          <p style="font-size: 14px; color: #aaa; line-height: 1.7;">駐車場がない場合、駐車場代はお客様のご負担となります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-['.videos-grid', '.instrument-grid', '.links-grid', '.news-list'].forEach(sel => {
-  const c = document.querySelector(sel);
-  if (!c) return;
-  c.querySelectorAll('.fade-in').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.07}s`;
-  });
-});
+<!-- Service Area Section -->
+<div style="background: var(--black-soft); padding: 80px 40px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-title">
+      <span class="en">Service Area</span>
+      <h2>対応<span class="accent">エリア</span></h2>
+      <div class="line"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+      <div style="background: var(--black); border: 2px solid #333; border-radius: 8px; padding: 28px;">
+        <h3 style="color: var(--yellow); font-size: 18px; font-weight: 900; margin-bottom: 16px; border-bottom: 1px solid #333; padding-bottom: 12px;">&#128205; 愛知県</h3>
+        <p style="color: #ccc; font-size: 15px; line-height: 2;">
+          愛西市 / あま市 / 一宮市 / 稲沢市 / 岩倉市 / 春日井市 / 清須市 / 江南市 / 小牧市 / 津島市 / 弥富市<br>
+          名古屋市熱田区 / 北区 / 昭和区 / 千種区 / 天白区 / 中川区 / 中区 / 中村区 / 西区 / 東区 / 瑞穂区 / 緑区 / 港区 / 南区 / 名東区 / 守山区
+        </p>
+      </div>
+      <div style="background: var(--black); border: 2px solid #333; border-radius: 8px; padding: 28px;">
+        <h3 style="color: var(--yellow); font-size: 18px; font-weight: 900; margin-bottom: 16px; border-bottom: 1px solid #333; padding-bottom: 12px;">&#128205; 岐阜県</h3>
+        <p style="color: #ccc; font-size: 15px; line-height: 2;">羽島市</p>
+      </div>
+      <div style="background: var(--black); border: 2px solid var(--yellow); border-radius: 8px; padding: 28px;">
+        <h3 style="color: var(--yellow); font-size: 18px; font-weight: 900; margin-bottom: 16px; border-bottom: 1px solid #333; padding-bottom: 12px;">&#128222; 三重県・その他エリア</h3>
+        <p style="color: #ccc; font-size: 15px; line-height: 1.8;"><strong style="color: var(--yellow);">三重県</strong>（桑名市・四日市市・鈴鹿市など）も対応できる場合があります。まずはお気軽にご相談ください。</p>
+        <a href="tel:09099422501" class="btn-primary" style="display: inline-block; margin-top: 16px; font-size: 15px; padding: 12px 24px;">&#9889; まず電話で相談</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-targets.forEach(el => io.observe(el));
+<div class="cta-section" id="contact">
+  <div class="danger-stripe" style="margin-bottom:60px;"></div>
+  <h2>&#128027; 蜂を発見したら<br>迷わず連絡！</h2>
+  <p>365日・24時間受付。まずはお気軽にご相談ください。</p>
+  <a href="tel:09099422501" class="cta-tel-big">090-9942-2501</a>
+  <div class="cta-time">受付時間：24時間365日対応 ／ 作業時間：8:00〜20:00</div>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a href="tel:09099422501" class="btn-primary" style="font-size:18px;">&#9889; 電話で今すぐ相談</a>
+    <a href="#" class="btn-secondary" style="font-size:16px;">&#128203; メールで見積り依頼</a>
+  </div>
+  <div class="danger-stripe" style="margin-top:60px;"></div>
+</div>
 
-// スムーズスクロール（ナビ高さ分補正）
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', (e) => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (!t) return;
-    e.preventDefault();
-    const top = t.getBoundingClientRect().top + window.scrollY - navbar.getBoundingClientRect().height - 8;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-});
-  </script>
+<footer>
+  <div class="footer-logo">&#128027; BEE BUSTER</div>
+  <p style="color:#888; margin-top:8px;">蜂駆除のプロフェッショナル</p>
+  <p style="margin-top:24px;">対応エリア：愛知県（名古屋市各区・一宮市・春日井市・稲沢市 他）／ 岐阜県羽島市 ／ 三重県（応相談）</p>
+  <p>&copy; 2025 Bee Buster. All Rights Reserved.</p>
+</footer>
+
+<a href="tel:09099422501" class="float-contact">&#9889; 今すぐ電話</a>
+
 </body>
 </html>
